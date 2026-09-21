@@ -1,0 +1,531 @@
+<title>LF-1 Launch Set</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#FCFCF7; --surface:#FFFFFF; --ink:#14231C; --soft:#5E6B63; --line:#E6E2D6;
+  --accent:#C8901A; --accentInk:#14231C; --keep:#2F6B4F; --cut:#A63D2F; --chip:#F1EDE1;
+  --serif:'Instrument Serif',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F120F; --surface:#171B17; --ink:#F2F0E6; --soft:#9AA79D; --line:#262B26;
+  --accent:#F0B429; --accentInk:#14231C; --keep:#6FBF8F; --cut:#E08472; --chip:#20261F;}}
+:root[data-theme="dark"]{
+  --bg:#0F120F; --surface:#171B17; --ink:#F2F0E6; --soft:#9AA79D; --line:#262B26;
+  --accent:#F0B429; --accentInk:#14231C; --keep:#6FBF8F; --cut:#E08472; --chip:#20261F;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);margin:0;padding-inline:20px;padding-block:0 56px;line-height:1.5}
+.wrap{max-width:1360px;margin:0 auto}
+header{padding-block:40px 20px;border-bottom:1px solid var(--line)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin:0 0 10px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,54px);line-height:1.02;margin:0 0 12px;text-wrap:balance}
+.lede{margin:0;max-width:62ch;color:var(--soft);font-size:15px}
+.stats{display:flex;flex-wrap:wrap;gap:22px;margin-top:20px;font-family:var(--mono);font-size:12px;color:var(--soft)}
+.stats b{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);
+  padding-block:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.f{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:999px;
+  border:1px solid var(--line);background:transparent;color:var(--soft);cursor:pointer}
+.f[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.f:focus-visible,.mark:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:26px;padding-block:26px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.card[data-mark="keep"]{border-color:var(--keep);box-shadow:inset 0 0 0 1px var(--keep)}
+.card[data-mark="cut"]{opacity:.5}
+.shot{background:var(--chip)}
+.shot img{display:block;width:100%;height:auto;max-width:100%}
+.meta{padding:14px 15px 15px;display:flex;flex-direction:column;gap:9px;flex:1}
+.row{display:flex;align-items:center;gap:9px}
+.row.spread{justify-content:space-between;margin-top:auto;padding-top:4px}
+.num{font-family:var(--mono);font-size:12px;color:var(--soft);font-variant-numeric:tabular-nums}
+.chip{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:var(--chip);color:var(--soft);padding:3px 8px;border-radius:999px}
+.hl{font-family:var(--serif);font-size:19px;line-height:1.18;margin:0;text-wrap:balance}
+.sub{margin:0;font-size:12.5px;color:var(--soft);line-height:1.45}
+.mono{font-family:var(--mono);font-size:10.5px;color:var(--soft)}
+.mark{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:999px;
+  border:1px solid var(--line);background:transparent;color:var(--soft);cursor:pointer}
+.mark[data-s="keep"]{color:var(--keep);border-color:var(--keep)}
+.mark[data-s="cut"]{color:var(--cut);border-color:var(--cut)}
+.note{margin-top:34px;padding:20px 22px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:4px;background:var(--surface)}
+.note h2{font-family:var(--serif);font-weight:400;font-size:22px;margin:0 0 10px}
+.note p{margin:0 0 9px;font-size:14px;color:var(--soft);max-width:70ch}
+.note p:last-child{margin-bottom:0}
+.note b{color:var(--ink);font-weight:500}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<div class="wrap">
+<header>
+  <p class="kicker">LEAF · LF-1 · staged in Meta, paused</p>
+  <h1>Thirty-five ads, one per ad set.</h1>
+  <p class="lede">Each creative tests a single idea, so a winner points at an angle rather than a coincidence. Every line passed the compliance linter: no prescription brand names, no weight-loss claims, no price, no body imagery.</p>
+  <div class="stats">
+    <span><b>35</b> creatives</span><span><b>10</b> angles</span><span><b>19</b> layouts</span>
+    <span><b>1080×1350</b> 4:5</span><span><b>0</b> compliance violations</span>
+  </div>
+</header>
+<div class="bar" id="bar">
+  <button class="f" data-a="all" aria-pressed="true">All 35</button>
+  <button class="f" data-a="GI_SPECIFIC" aria-pressed="false">Digestive</button><button class="f" data-a="FINALLY_NORMAL" aria-pressed="false">Relief</button><button class="f" data-a="NUTRIENT_GAP" aria-pressed="false">Nutrient gap</button><button class="f" data-a="COMPANION" aria-pressed="false">Companion</button><button class="f" data-a="STAY_COURSE" aria-pressed="false">Retention</button><button class="f" data-a="FIBER_FAILS" aria-pressed="false">Mechanism</button><button class="f" data-a="CLEAN_LABEL" aria-pressed="false">Clean label</button><button class="f" data-a="RITUAL" aria-pressed="false">Ritual</button><button class="f" data-a="NO_MANUAL" aria-pressed="false">No manual</button><button class="f" data-a="EURO_STANDARD" aria-pressed="false">Standards</button>
+  <span class="mono" id="tally" style="margin-left:auto"></span>
+</div>
+<div class="grid" id="grid">
+  <article class="card" data-angle="GI_SPECIFIC" data-n="1">
+    <div class="shot"><img src="ads/LF1_01_GI_SPECIFIC_centeredHero_leafDeep_4x5.png" alt="Built for a GLP-1 gut." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">01</span><span class="chip">Digestive</span></div>
+      <p class="hl">Built for a GLP-1 gut.</p>
+      <p class="sub">Daily digestive support · 60 capsules</p>
+      <div class="row spread">
+        <span class="mono">centeredHero · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 1" data-n="1">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-n="2">
+    <div class="shot"><img src="ads/LF1_02_GI_SPECIFIC_bigType_leafCream_4x5.png" alt="We take care of your GLP-1 sides." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">02</span><span class="chip">Digestive</span></div>
+      <p class="hl">We take care of your GLP-1 sides.</p>
+      <p class="sub">LF-1 is daily digestive support made for people on a GLP-1.</p>
+      <div class="row spread">
+        <span class="mono">bigType · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 2" data-n="2">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-n="3">
+    <div class="shot"><img src="ads/LF1_03_GI_SPECIFIC_mythFactPill_leafNoir_4x5.png" alt="Built for GLP-1 digestion, not general wellness." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">03</span><span class="chip">Digestive</span></div>
+      <p class="hl">Built for GLP-1 digestion, not general wellness.</p>
+      <p class="sub">Two capsules daily. 60 per bottle.</p>
+      <div class="row spread">
+        <span class="mono">mythFactPill · leafNoir</span>
+        <button class="mark" type="button" aria-label="Mark ad 3" data-n="3">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-n="4">
+    <div class="shot"><img src="ads/LF1_04_GI_SPECIFIC_contrastPanel_leafCream_4x5.png" alt="No laxatives in the formula." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">04</span><span class="chip">Digestive</span></div>
+      <p class="hl">No laxatives in the formula.</p>
+      <p class="sub">Digestive Support · two capsules daily.</p>
+      <div class="row spread">
+        <span class="mono">contrastPanel · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 4" data-n="4">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-n="5">
+    <div class="shot"><img src="ads/LF1_05_GI_SPECIFIC_labelPanel_leafDeep_4x5.png" alt="Digestive support that fits the protocol." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">05</span><span class="chip">Digestive</span></div>
+      <p class="hl">Digestive support that fits the protocol.</p>
+      <p class="sub">Category: Digestive Support. Dose: two capsules daily.</p>
+      <div class="row spread">
+        <span class="mono">labelPanel · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 5" data-n="5">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-n="6">
+    <div class="shot"><img src="ads/LF1_06_GI_SPECIFIC_ruleStack_leafCream_4x5.png" alt="Made for how a GLP-1 actually works." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">06</span><span class="chip">Digestive</span></div>
+      <p class="hl">Made for how a GLP-1 actually works.</p>
+      <p class="sub">Designed around slower gastric emptying, not general gut health.</p>
+      <div class="row spread">
+        <span class="mono">ruleStack · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 6" data-n="6">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-n="7">
+    <div class="shot"><img src="ads/LF1_07_GI_SPECIFIC_quoteCard_sage_4x5.png" alt="Your gut is on this journey too." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">07</span><span class="chip">Digestive</span></div>
+      <p class="hl">Your gut is on this journey too.</p>
+      <p class="sub">Daily digestive support for people on a GLP-1.</p>
+      <div class="row spread">
+        <span class="mono">quoteCard · sage</span>
+        <button class="mark" type="button" aria-label="Mark ad 7" data-n="7">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-n="8">
+    <div class="shot"><img src="ads/LF1_08_FINALLY_NORMAL_bigType_leafNoir_4x5.png" alt="Finally, a GLP-1 morning that feels normal." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">08</span><span class="chip">Relief</span></div>
+      <p class="hl">Finally, a GLP-1 morning that feels normal.</p>
+      <p class="sub">Built around the routine, not around the scale.</p>
+      <div class="row spread">
+        <span class="mono">bigType · leafNoir</span>
+        <button class="mark" type="button" aria-label="Mark ad 8" data-n="8">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-n="9">
+    <div class="shot"><img src="ads/LF1_09_FINALLY_NORMAL_splitPanel_leafDeep_4x5.png" alt="Your GLP-1 is doing its job. LF-1 handles the rest." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">09</span><span class="chip">Relief</span></div>
+      <p class="hl">Your GLP-1 is doing its job. LF-1 handles the rest.</p>
+      <p class="sub">A daily digestive companion for the part nobody briefs you on.</p>
+      <div class="row spread">
+        <span class="mono">splitPanel · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 9" data-n="9">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-n="10">
+    <div class="shot"><img src="ads/LF1_10_FINALLY_NORMAL_centeredHero_leafCream_4x5.png" alt="Feel like yourself again." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">10</span><span class="chip">Relief</span></div>
+      <p class="hl">Feel like yourself again.</p>
+      <p class="sub">A companion to your GLP-1 · never a replacement</p>
+      <div class="row spread">
+        <span class="mono">centeredHero · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 10" data-n="10">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-n="11">
+    <div class="shot"><img src="ads/LF1_11_FINALLY_NORMAL_stickyNote_leafDeep_4x5.png" alt="The companion your GLP-1 came without." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">11</span><span class="chip">Relief</span></div>
+      <p class="hl">The companion your GLP-1 came without.</p>
+      <p class="sub">Two capsules each morning. 60 per bottle.</p>
+      <div class="row spread">
+        <span class="mono">stickyNote · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 11" data-n="11">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-n="12">
+    <div class="shot"><img src="ads/LF1_12_FINALLY_NORMAL_quoteCard_leafCream_4x5.png" alt="The missing half of your GLP-1 routine." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">12</span><span class="chip">Relief</span></div>
+      <p class="hl">The missing half of your GLP-1 routine.</p>
+      <p class="sub">One simple daily step alongside your GLP-1.</p>
+      <div class="row spread">
+        <span class="mono">quoteCard · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 12" data-n="12">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-n="13">
+    <div class="shot"><img src="ads/LF1_13_NUTRIENT_GAP_bigType_leafCream_4x5.png" alt="Eating less doesn’t mean needing less." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">13</span><span class="chip">Nutrient gap</span></div>
+      <p class="hl">Eating less doesn’t mean needing less.</p>
+      <p class="sub">A GLP-1 reduces appetite — and everything that comes in with food.</p>
+      <div class="row spread">
+        <span class="mono">bigType · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 13" data-n="13">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-n="14">
+    <div class="shot"><img src="ads/LF1_14_NUTRIENT_GAP_contrastPanel_leafNoir_4x5.png" alt="Smaller plates. Same requirements." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">14</span><span class="chip">Nutrient gap</span></div>
+      <p class="hl">Smaller plates. Same requirements.</p>
+      <p class="sub">Formulated for people eating substantially less than before.</p>
+      <div class="row spread">
+        <span class="mono">contrastPanel · leafNoir</span>
+        <button class="mark" type="button" aria-label="Mark ad 14" data-n="14">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-n="15">
+    <div class="shot"><img src="ads/LF1_15_NUTRIENT_GAP_statBlock_leafDeep_4x5.png" alt="Your appetite dropped. Your needs didn’t." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">15</span><span class="chip">Nutrient gap</span></div>
+      <p class="hl">Your appetite dropped. Your needs didn’t.</p>
+      <p class="sub">Two capsules daily, taken alongside your routine.</p>
+      <div class="row spread">
+        <span class="mono">statBlock · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 15" data-n="15">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-n="16">
+    <div class="shot"><img src="ads/LF1_16_NUTRIENT_GAP_mythFactPill_leafCream_4x5.png" alt="A GLP-1 changes intake. Plan for it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">16</span><span class="chip">Nutrient gap</span></div>
+      <p class="hl">A GLP-1 changes intake. Plan for it.</p>
+      <p class="sub">Daily support for people eating far less than before.</p>
+      <div class="row spread">
+        <span class="mono">mythFactPill · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 16" data-n="16">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-n="17">
+    <div class="shot"><img src="ads/LF1_17_NUTRIENT_GAP_faqCard_sage_4x5.png" alt="The maths nobody does on a GLP-1." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">17</span><span class="chip">Nutrient gap</span></div>
+      <p class="hl">The maths nobody does on a GLP-1.</p>
+      <p class="sub">When portions shrink, everything that comes in with food shrinks too.</p>
+      <div class="row spread">
+        <span class="mono">faqCard · sage</span>
+        <button class="mark" type="button" aria-label="Mark ad 17" data-n="17">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-n="18">
+    <div class="shot"><img src="ads/LF1_18_COMPANION_prescriptionPair_leafCream_4x5.png" alt="A companion, never a replacement." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">18</span><span class="chip">Companion</span></div>
+      <p class="hl">A companion, never a replacement.</p>
+      <p class="sub">LF-1 does not replace your GLP-1. It sits alongside it.</p>
+      <div class="row spread">
+        <span class="mono">prescriptionPair · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 18" data-n="18">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-n="19">
+    <div class="shot"><img src="ads/LF1_19_COMPANION_contrastPanel_leafDeep_4x5.png" alt="Built for injections and oral GLP-1s alike." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">19</span><span class="chip">Companion</span></div>
+      <p class="hl">Built for injections and oral GLP-1s alike.</p>
+      <p class="sub">One daily companion, whichever route you’re on.</p>
+      <div class="row spread">
+        <span class="mono">contrastPanel · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 19" data-n="19">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-n="20">
+    <div class="shot"><img src="ads/LF1_20_COMPANION_centeredHero_leafNoir_4x5.png" alt="Purpose-built to complement, not compete." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">20</span><span class="chip">Companion</span></div>
+      <p class="hl">Purpose-built to complement, not compete.</p>
+      <p class="sub">A companion to your GLP-1 · never a replacement</p>
+      <div class="row spread">
+        <span class="mono">centeredHero · leafNoir</span>
+        <button class="mark" type="button" aria-label="Mark ad 20" data-n="20">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-n="21">
+    <div class="shot"><img src="ads/LF1_21_COMPANION_indexCard_sand_4x5.png" alt="The other half of the protocol." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">21</span><span class="chip">Companion</span></div>
+      <p class="hl">The other half of the protocol.</p>
+      <p class="sub">A companion to your GLP-1 — never a replacement for it.</p>
+      <div class="row spread">
+        <span class="mono">indexCard · sand</span>
+        <button class="mark" type="button" aria-label="Mark ad 21" data-n="21">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-n="22">
+    <div class="shot"><img src="ads/LF1_22_STAY_COURSE_timeline_leafCream_4x5.png" alt="Month one is easy. LF-1 is for month four." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">22</span><span class="chip">Retention</span></div>
+      <p class="hl">Month one is easy. LF-1 is for month four.</p>
+      <p class="sub">Built for the long stretch, not the first week.</p>
+      <div class="row spread">
+        <span class="mono">timeline · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 22" data-n="22">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-n="23">
+    <div class="shot"><img src="ads/LF1_23_STAY_COURSE_mythFactPill_leafDeep_4x5.png" alt="Support the course you already committed to." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">23</span><span class="chip">Retention</span></div>
+      <p class="hl">Support the course you already committed to.</p>
+      <p class="sub">Made for people who intend to finish.</p>
+      <div class="row spread">
+        <span class="mono">mythFactPill · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 23" data-n="23">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-n="24">
+    <div class="shot"><img src="ads/LF1_24_STAY_COURSE_boxFrame_leafNoir_4x5.png" alt="Built for people who don’t quit." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">24</span><span class="chip">Retention</span></div>
+      <p class="hl">Built for people who don’t quit.</p>
+      <p class="sub">A daily habit for a long commitment.</p>
+      <div class="row spread">
+        <span class="mono">boxFrame · leafNoir</span>
+        <button class="mark" type="button" aria-label="Mark ad 24" data-n="24">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-n="25">
+    <div class="shot"><img src="ads/LF1_25_FIBER_FAILS_bigType_leafDeep_4x5.png" alt="GLP-1? Think beyond fiber." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">25</span><span class="chip">Mechanism</span></div>
+      <p class="hl">GLP-1? Think beyond fiber.</p>
+      <p class="sub">A GLP-1 slows gastric emptying — support should account for that.</p>
+      <div class="row spread">
+        <span class="mono">bigType · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 25" data-n="25">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-n="26">
+    <div class="shot"><img src="ads/LF1_26_FIBER_FAILS_contrastPanel_leafCream_4x5.png" alt="Why a generic fiber scoop isn’t built for this." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">26</span><span class="chip">Mechanism</span></div>
+      <p class="hl">Why a generic fiber scoop isn’t built for this.</p>
+      <p class="sub">Purpose-built rather than general-purpose.</p>
+      <div class="row spread">
+        <span class="mono">contrastPanel · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 26" data-n="26">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-n="27">
+    <div class="shot"><img src="ads/LF1_27_FIBER_FAILS_mythFactPill_leafNoir_4x5.png" alt="Built for the mechanism, not the symptom." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">27</span><span class="chip">Mechanism</span></div>
+      <p class="hl">Built for the mechanism, not the symptom.</p>
+      <p class="sub">Designed around how a GLP-1 behaves.</p>
+      <div class="row spread">
+        <span class="mono">mythFactPill · leafNoir</span>
+        <button class="mark" type="button" aria-label="Mark ad 27" data-n="27">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-n="28">
+    <div class="shot"><img src="ads/LF1_28_CLEAN_LABEL_centeredHero_leafCream_4x5.png" alt="Whole ingredients. Zero compromise." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">28</span><span class="chip">Clean label</span></div>
+      <p class="hl">Whole ingredients. Zero compromise.</p>
+      <p class="sub">Non-GMO · Vegetarian · Allergen-free</p>
+      <div class="row spread">
+        <span class="mono">centeredHero · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 28" data-n="28">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-n="29">
+    <div class="shot"><img src="ads/LF1_29_CLEAN_LABEL_badgeGrid_leafDeep_4x5.png" alt="Eight things LF-1 isn’t." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">29</span><span class="chip">Clean label</span></div>
+      <p class="hl">Eight things LF-1 isn’t.</p>
+      <p class="sub">Everything on the label, nothing behind it.</p>
+      <div class="row spread">
+        <span class="mono">badgeGrid · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 29" data-n="29">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-n="30">
+    <div class="shot"><img src="ads/LF1_30_CLEAN_LABEL_labelPanel_leafNoir_4x5.png" alt="Read the label. That’s the pitch." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">30</span><span class="chip">Clean label</span></div>
+      <p class="hl">Read the label. That’s the pitch.</p>
+      <p class="sub">60 vegetarian capsules. Two daily.</p>
+      <div class="row spread">
+        <span class="mono">labelPanel · leafNoir</span>
+        <button class="mark" type="button" aria-label="Mark ad 30" data-n="30">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-n="31">
+    <div class="shot"><img src="ads/LF1_31_RITUAL_numberedSteps_leafCream_4x5.png" alt="Two capsules. Every morning. That’s it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">31</span><span class="chip">Ritual</span></div>
+      <p class="hl">Two capsules. Every morning. That’s it.</p>
+      <p class="sub">Capsule format. No powder, no shaker, no flavour to tolerate.</p>
+      <div class="row spread">
+        <span class="mono">numberedSteps · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 31" data-n="31">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-n="32">
+    <div class="shot"><img src="ads/LF1_32_RITUAL_statBlock_sage_4x5.png" alt="A ten-second habit." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">32</span><span class="chip">Ritual</span></div>
+      <p class="hl">A ten-second habit.</p>
+      <p class="sub">60 capsules per bottle — a full month of mornings.</p>
+      <div class="row spread">
+        <span class="mono">statBlock · sage</span>
+        <button class="mark" type="button" aria-label="Mark ad 32" data-n="32">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-n="33">
+    <div class="shot"><img src="ads/LF1_33_NO_MANUAL_notesApp_sand_4x5.png" alt="Because a GLP-1 doesn’t come with a manual." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">33</span><span class="chip">No manual</span></div>
+      <p class="hl">Because a GLP-1 doesn’t come with a manual.</p>
+      <p class="sub">Made for people already on a GLP-1 and figuring out the rest.</p>
+      <div class="row spread">
+        <span class="mono">notesApp · sand</span>
+        <button class="mark" type="button" aria-label="Mark ad 33" data-n="33">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-n="34">
+    <div class="shot"><img src="ads/LF1_34_NO_MANUAL_quoteCard_leafDeep_4x5.png" alt="Everybody covers week one. Nobody covers week nine." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">34</span><span class="chip">No manual</span></div>
+      <p class="hl">Everybody covers week one. Nobody covers week nine.</p>
+      <p class="sub">Support for the months after the first appointment.</p>
+      <div class="row spread">
+        <span class="mono">quoteCard · leafDeep</span>
+        <button class="mark" type="button" aria-label="Mark ad 34" data-n="34">Unmarked</button>
+      </div>
+    </div>
+  </article>
+  <article class="card" data-angle="EURO_STANDARD" data-n="35">
+    <div class="shot"><img src="ads/LF1_35_EURO_STANDARD_circleSeal_leafCream_4x5.png" alt="Regulated market. Honest label." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">35</span><span class="chip">Standards</span></div>
+      <p class="hl">Regulated market. Honest label.</p>
+      <p class="sub">LEAF is a Netherlands-based brand. LF-1 is manufactured in the USA.</p>
+      <div class="row spread">
+        <span class="mono">circleSeal · leafCream</span>
+        <button class="mark" type="button" aria-label="Mark ad 35" data-n="35">Unmarked</button>
+      </div>
+    </div>
+  </article></div>
+<div class="note">
+  <h2>Before these go live</h2>
+  <p><b>Price is deliberately absent.</b> Shopify charges €49.00; the landing page shows €35.00. No ad states a price until those agree.</p>
+  <p><b>Targeting is set to the United States</b>, matching the page's "free shipping only in USA" and the product shipping from the US. Change it if that's wrong.</p>
+  <p><b>Everything is paused.</b> Nothing spends until you activate it.</p>
+</div>
+</div>
+<script>
+(function(){
+  var KEY='lf1-marks-v1', marks={};
+  try{ marks=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ marks={}; }
+  var order=['none','keep','cut'], label={none:'Unmarked',keep:'Keep',cut:'Cut'};
+  function paint(){
+    var k=0,c=0;
+    document.querySelectorAll('.card').forEach(function(card){
+      var n=card.dataset.n, s=marks[n]||'none';
+      var btn=card.querySelector('.mark');
+      btn.textContent=label[s]; btn.dataset.s=s;
+      if(s==='none'){card.removeAttribute('data-mark');}else{card.dataset.mark=s;}
+      if(s==='keep')k++; if(s==='cut')c++;
+    });
+    document.getElementById('tally').textContent = (k||c) ? k+' keep · '+c+' cut' : '';
+  }
+  document.getElementById('grid').addEventListener('click',function(e){
+    var b=e.target.closest('.mark'); if(!b)return;
+    var n=b.dataset.n, s=marks[n]||'none';
+    marks[n]=order[(order.indexOf(s)+1)%3];
+    if(marks[n]==='none') delete marks[n];
+    try{ localStorage.setItem(KEY,JSON.stringify(marks)); }catch(e){}
+    paint();
+  });
+  document.getElementById('bar').addEventListener('click',function(e){
+    var b=e.target.closest('.f'); if(!b)return;
+    document.querySelectorAll('.f').forEach(function(x){x.setAttribute('aria-pressed', String(x===b));});
+    var a=b.dataset.a;
+    document.querySelectorAll('.card').forEach(function(c){ c.hidden = !(a==='all'||c.dataset.angle===a); });
+  });
+  paint();
+})();
+</script>

@@ -34,6 +34,11 @@ function fontFaceCSS() {
    onAccent, line (hairlines), tint (panel fill).
    `mood` drives which type pairings the composer will allow.             */
 const PALETTES = [
+  /* Pulled from the live LF-1 landing page: cream #FCFCF7 section fill,
+     deep botanical green, and the yellow used on every CTA and the bottle. */
+  { id:'leafCream', mood:'editorial',bg:'#FCFCF7', ink:'#14231C', soft:'#5E6B63', accent:'#F0B429', onAccent:'#14231C', line:'#E6E2D6', tint:'#F3EFE3' },
+  { id:'leafDeep',  mood:'premium',  bg:'#0E2F24', ink:'#F7F5EC', soft:'#A6C0B1', accent:'#F0B429', onAccent:'#14231C', line:'#1F4737', tint:'#16382B' },
+  { id:'leafNoir',  mood:'bold',     bg:'#0B0B0C', ink:'#FAFAF8', soft:'#989894', accent:'#F0B429', onAccent:'#0B0B0C', line:'#232326', tint:'#141416' },
   { id:'forest',    mood:'premium',  bg:'#0E3B2E', ink:'#F5F2E8', soft:'#A9C4B5', accent:'#D8F24E', onAccent:'#0E3B2E', line:'#2A5A49', tint:'#17493A' },
   { id:'bone',      mood:'editorial',bg:'#F2EFE4', ink:'#14231C', soft:'#5C6B62', accent:'#0E3B2E', onAccent:'#F5F2E8', line:'#D9D3C2', tint:'#E8E3D3' },
   { id:'sage',      mood:'calm',     bg:'#DCE5D8', ink:'#1B2F25', soft:'#556A5C', accent:'#0E3B2E', onAccent:'#F5F2E8', line:'#C3D0BD', tint:'#CEDAC9' },
@@ -94,7 +99,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);position:rela
 /* very subtle paper grain so flat fills don't read as digital emptiness */
 .canvas::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:${process.env.LF1_GRAIN?'.035':'0'};display:${process.env.LF1_GRAIN?'block':'none'};
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");}
-.display{font-family:var(--display);letter-spacing:var(--dTrack);line-height:.96;text-transform:${ts.dCase};overflow-wrap:break-word}
+.display{font-family:var(--display);letter-spacing:var(--dTrack);line-height:.96;text-transform:${ts.dCase};overflow-wrap:normal;hyphens:none;word-break:normal}
 .pad{padding:calc(var(--u)*7)}
 .soft{color:var(--soft)}
 .accent{color:var(--accent)}

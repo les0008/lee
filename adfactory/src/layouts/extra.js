@@ -109,14 +109,14 @@ def('prescriptionPair', ['clinical','trust'], c => {
     ${headline(c,`font-size:calc(var(--u)*${sh==='wide'?6:7.6})`)}
     <div style="flex:1;display:flex;flex-direction:${sh==='xtall'?'column':'row'};gap:calc(var(--u)*2.4);align-items:${sh==='xtall'?'stretch':'stretch'};justify-content:center">
       <div style="flex:1;border:1px dashed var(--line);border-radius:calc(var(--u)*2);padding:calc(var(--u)*3.4);display:flex;flex-direction:column;gap:calc(var(--u)*1.4);justify-content:center">
-        <div class="eyebrow">Your GLP-1</div>
-        <div style="font-family:var(--ui);font-size:calc(var(--u)*2.8);line-height:1.35">Prescribed by your clinician</div>
+        <div class="eyebrow" style="font-size:calc(var(--u)*2.4)">Your GLP-1</div>
+        <div style="font-family:var(--ui);font-size:calc(var(--u)*3.4);line-height:1.3">Prescribed by your clinician</div>
         <div class="fine">LF-1 does not replace it.</div>
       </div>
       <div style="flex:none;display:flex;align-items:center;justify-content:center;color:var(--soft);font-size:calc(var(--u)*3.6)">+</div>
       <div style="flex:1;background:var(--tint);border:calc(var(--u)*.3) solid var(--accent);border-radius:calc(var(--u)*2);padding:calc(var(--u)*3.4);display:flex;flex-direction:column;gap:calc(var(--u)*1.4);justify-content:center">
-        <div class="eyebrow accent">LF-1</div>
-        <div style="font-family:var(--ui);font-size:calc(var(--u)*2.8);line-height:1.35">Daily digestive support</div>
+        <div class="eyebrow accent" style="font-size:calc(var(--u)*2.4)">LF-1</div>
+        <div style="font-family:var(--ui);font-size:calc(var(--u)*3.4);line-height:1.3">Daily digestive support</div>
         <div class="fine">${esc(BRAND.dose)} · ${esc(BRAND.capsules)}</div>
       </div>
     </div>
@@ -187,3 +187,77 @@ def('mythFact', ['clinical','bold'], c => {
 });
 
 module.exports = L;
+
+/* ---- Benchmark-grade layouts, modelled on the restraint of the reference ads:
+   centred wordmark, one idea, enormous negative space, small-caps kicker. ---- */
+
+function capsuleArt(scale) {
+  return `<svg viewBox="0 0 120 300" style="height:${scale};width:auto;overflow:visible">
+    <defs><linearGradient id="cp" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="currentColor" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="currentColor" stop-opacity=".55"/></linearGradient></defs>
+    <rect x="12" y="8" width="96" height="284" rx="48" fill="url(#cp)"/>
+    <path d="M12 150 h96 v94 a48 48 0 0 1 -48 48 h0 a48 48 0 0 1 -48 -48 z" fill="currentColor" opacity=".26"/>
+    <rect x="12" y="146" width="96" height="7" fill="currentColor" opacity=".16"/>
+    <ellipse cx="40" cy="62" rx="11" ry="28" fill="#fff" opacity=".2"/>
+  </svg>`;
+}
+
+/* 24 — Centred hero. One line, one object, nothing else. */
+def('centeredHero', ['premium','any'], c => {
+  const sh = shapeOf(c.fmt);
+  const art = c.productImage
+    ? `<img src="${esc(c.productImage)}" style="max-height:100%;max-width:70%;object-fit:contain"/>`
+    : `<div class="accent" style="display:flex;height:100%;align-items:center">${capsuleArt('100%')}</div>`;
+  return `<div class="pad" style="height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;gap:calc(var(--u)*3)">
+    <div class="wordmark" style="font-size:calc(var(--u)*2.9);letter-spacing:.3em">${esc(BRAND.brand)}</div>
+    ${headline(c, `font-weight:400;max-width:${sh==='wide'?'70%':'94%'};text-align:center`)}
+    <div style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center;width:100%;padding:calc(var(--u)*2) 0">${art}</div>
+    <div style="font-family:var(--ui);font-size:calc(var(--u)*2.1);letter-spacing:.2em;text-transform:uppercase;line-height:1.7;color:var(--soft)">${esc(c.subhead)}</div>
+    <div class="fine" style="opacity:.7">${esc(BRAND.url)}</div>
+  </div>`;
+});
+
+/* 25 — Myth / Fact. The fact is the ad; the myth is the setup. */
+def('mythFactPill', ['bold','any'], c => {
+  const m = c.mythPair;
+  const pill = (label, dim) => `<div style="display:inline-flex;align-items:center;justify-content:center;
+    border:calc(var(--u)*.26) solid ${dim?'var(--soft)':'var(--accent)'};color:${dim?'var(--soft)':'var(--accent)'};
+    border-radius:calc(var(--u)*10);padding:calc(var(--u)*1.3) calc(var(--u)*4);
+    font-family:var(--ui);font-size:calc(var(--u)*2.5);letter-spacing:.2em;text-transform:uppercase">${label}</div>`;
+  return `<div class="pad" style="height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;gap:calc(var(--u)*2.5)">
+    <div class="wordmark" style="font-size:calc(var(--u)*2.9);letter-spacing:.3em">${esc(BRAND.brand)}</div>
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(var(--u)*4);width:100%">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*2.2);width:100%">
+        ${pill('Myth', true)}
+        <div class="soft" style="font-size:calc(var(--u)*4);line-height:1.25;max-width:88%;text-decoration:line-through;text-decoration-thickness:calc(var(--u)*.14);text-decoration-color:var(--soft)">${esc(m.myth)}</div>
+      </div>
+      <div style="width:calc(var(--u)*10);height:1px;background:var(--line)"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*2.2);width:100%">
+        ${pill('Fact', false)}
+        ${headline(c, 'font-size:calc(var(--u)*6.4);text-align:center;max-width:92%')}
+      </div>
+    </div>
+    <div style="font-family:var(--ui);font-size:calc(var(--u)*2.1);letter-spacing:.18em;text-transform:uppercase;color:var(--soft);line-height:1.6">${esc(c.subhead)}</div>
+    <div class="fine" style="opacity:.7">${esc(BRAND.url)}</div>
+  </div>`;
+});
+
+/* 26 — Two-panel contrast, without the organ diagrams. */
+def('contrastPanel', ['bold','clinical'], c => {
+  const L = c.comparePair;
+  const col = (title, items, on) => `<div style="flex:1;display:flex;flex-direction:column;gap:calc(var(--u)*1.8);
+    padding:calc(var(--u)*3.2);border-radius:calc(var(--u)*2);
+    ${on?'background:var(--tint);border:calc(var(--u)*.28) solid var(--accent)':'border:1px solid var(--line);opacity:.72'}">
+    <div class="eyebrow" style="${on?'color:var(--accent)':''}">${esc(title)}</div>
+    ${items.map(x=>`<div style="font-size:calc(var(--u)*2.35);line-height:1.35;display:flex;gap:calc(var(--u)*1.3)">
+      <span style="${on?'color:var(--accent)':'opacity:.5'};flex:none">${on?'✓':'—'}</span>${esc(x)}</div>`).join('')}
+  </div>`;
+  return `<div class="pad" style="height:100%;display:flex;flex-direction:column;gap:calc(var(--u)*3.2)">
+    ${headline(c, 'font-size:calc(var(--u)*' + (shapeOf(c.fmt)==='wide' ? 6 : 7.6) + ')')}
+    <div style="flex:1;display:flex;gap:calc(var(--u)*2.2);align-items:stretch">
+      ${col(L.aTitle, L.a, false)}${col(L.bTitle, L.b, true)}
+    </div>
+    ${footer(c)}
+  </div>`;
+});
