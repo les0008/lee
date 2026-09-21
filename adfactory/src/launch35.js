@@ -102,9 +102,9 @@ const ADS = [
   // ---- RITUAL ----
   { angle:'RITUAL', layout:'numberedSteps', palette:'leafCream',
     h:'Two capsules. Every morning. That’s it.', s:'Capsule format. No powder, no shaker, no flavour to tolerate.', e:'The daily step', cta:'Shop LF-1' },
-  { angle:'RITUAL', layout:'statBlock', palette:'sage',
-    h:'A ten-second habit.', s:'60 capsules per bottle — a full month of mornings.', e:'Two capsules daily', cta:'Start with one month',
-    stat:{n:'60', label:'capsules per bottle'} },
+  { angle:'OFFER', layout:'statBlock', palette:'sage',
+    h:'A month of support for \u20ac35.', s:'60 capsules. Two daily. Available at leaf-pure.com.', e:'\u20ac35 \u00b7 60 capsules', cta:'Start with one month',
+    stat:{n:'\u20ac35', label:'one month, 60 capsules'} },
 
   // ---- NO_MANUAL ----
   { angle:'NO_MANUAL', layout:'notesApp', palette:'sand',

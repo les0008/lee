@@ -93,8 +93,10 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,54px);line-
 <div class="grid" id="grid">${cards}</div>
 <div class="note">
   <h2>Before these go live</h2>
-  <p><b>Price is deliberately absent.</b> Shopify charges €49.00; the landing page shows €35.00. No ad states a price until those agree.</p>
-  <p><b>Targeting is set to the United States</b>, matching the page's "free shipping only in USA" and the product shipping from the US. Change it if that's wrong.</p>
+  <p><b>Price is €35</b>, confirmed against the Shopify variant. Ad 32 carries it; the linter now blocks any other figure.</p>
+  <p><b>Backgrounds are built, not borrowed.</b> Deep botanical, studio and warm-light scenes drawn from your own landing-page palette. Competitor photography isn't ours to use — send LEAF or licensed shots and I'll composite them in place of these.</p>
+  <p><b>Budget: €100/day at campaign level</b>, shared across all 35 ad sets.</p>
+  <p><b>Targeting: specific US states</b> — waiting on your list.</p>
   <p><b>Everything is paused.</b> Nothing spends until you activate it.</p>
 </div>
 </div>

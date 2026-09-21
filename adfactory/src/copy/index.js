@@ -22,6 +22,7 @@ const FACTS = [
   'Alcohol-free',
   'Made in the USA',
   'One month supply',
+  '\u20ac35',
   'Digestive Support',
 ];
 
@@ -58,7 +59,9 @@ const BANNED = [
   { re:/\b(formulated|manufactured|produced)\s+(to|in|under)\s+(the\s+)?(europe|european|eu|dutch)\b/i, why:'false origin: manufactured in the USA' },
   /* Price is blocked outright. Shopify charges EUR49.00; the landing page shows
      EUR35.00 / EUR28.50. Until those agree, no ad may state a price. */
-  { re:/(\u20ac|\$|\u00a3)\s?\d/, why:'price blocked: Shopify (EUR49) and landing page (EUR35) disagree' },
+  /* Shopify variant and landing page now agree at EUR35.00 (verified). Only
+     that figure may appear; any other price in an ad is a mismatch with checkout. */
+  { re:/(\u20ac|\$|\u00a3)\s?(?!35\b)\d/, why:'wrong price \u2014 LF-1 is \u20ac35.00' },
   /* Claims present on the landing page that must never enter an ad. */
   { re:/\b\d+\+?\s*(lbs|pounds|kg)\b/i, why:'weight-loss amount claim \u2014 prohibited by EU Reg 1924/2006 Art.12' },
   { re:/\bsafe (to use )?with all (medications|medicines|drugs)\b/i, why:'unsupportable universal safety claim' },

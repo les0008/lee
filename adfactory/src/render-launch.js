@@ -6,6 +6,7 @@ require('./layouts/extra');
 const { LAYOUTS } = require('./layouts');
 const { PALETTE_BY_ID, TYPESETS, FORMATS, baseCSS } = require('./brand');
 const { build } = require('./launch35');
+const BG = require('./backgrounds');
 
 const CHROME='/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const ROOT=path.join(__dirname,'..'), BUILD=path.join(ROOT,'build'), OUT=path.join(ROOT,'out','launch35');
@@ -19,8 +20,11 @@ function html(c, fmt){
   const ts  = TYPESETS.find(t=>t.id===(TS_FOR[c.palette]||'grotesk'));
   const ctx = Object.assign({}, c, { fmt, pal, ts, pick:(a,n)=>a.slice(0,n) });
   const inner = LAYOUTS[c.layout].fn(ctx);
-  const css = baseCSS(fmt,pal,ts).replace(/node_modules\/@fontsource/g,'../node_modules/@fontsource');
-  return `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body><div class="canvas">${inner}</div></body></html>`;
+  const bg = BG.render(c, pal);
+  const css = baseCSS(fmt,pal,ts).replace(/node_modules\/@fontsource/g,'../node_modules/@fontsource')
+    + `.bglayer{position:absolute;inset:0;z-index:0;overflow:hidden}
+       .content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column}`;
+  return `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body><div class="canvas"><div class="bglayer">${bg}</div><div class="content">${inner}</div></div></body></html>`;
 }
 
 (async()=>{

@@ -342,13 +342,13 @@
   },
   {
     "n": 32,
-    "file": "LF1_32_RITUAL_statBlock_sage_4x5.png",
-    "angle": "RITUAL",
+    "file": "LF1_32_OFFER_statBlock_sage_4x5.png",
+    "angle": "OFFER",
     "layout": "statBlock",
     "palette": "sage",
-    "headline": "A ten-second habit.",
-    "subhead": "60 capsules per bottle — a full month of mornings.",
-    "eyebrow": "Two capsules daily",
+    "headline": "A month of support for €35.",
+    "subhead": "60 capsules. Two daily. Available at leaf-pure.com.",
+    "eyebrow": "€35 · 60 capsules",
     "cta": "Start with one month"
   },
   {
