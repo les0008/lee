@@ -9,6 +9,9 @@ module.exports = [
   eyebrows:['Daily GLP-1 companion','For life on a GLP-1','LEAF · LF-1','Made for GLP-1 routines','The companion capsule'],
   headlines:[
     'Finally, a GLP-1 morning that feels normal.',
+    'We take care of your GLP-1 sides.',
+    'The sides nobody warns you about.',
+    'Your GLP-1, minus the sides.',
     'Finally. Mornings that feel like yours.',
     'Feel normal. Stay the course.',
     'Your GLP-1 is doing its job. LF-1 handles the rest.',
@@ -54,6 +57,9 @@ module.exports = [
   eyebrows:['Digestive support','Daily regularity support','GI comfort, daily','Gut-first formulation','Digestive Support · LF-1'],
   headlines:[
     'Built for a GLP-1 gut.',
+    'No laxatives in the formula.',
+    'Built for injections and oral GLP-1s alike.',
+    'Whole ingredients. Zero compromise.',
     'Digestive comfort, on a GLP-1 schedule.',
     'Slower digestion deserves smarter support.',
     'GLP-1 mornings, made easier.',

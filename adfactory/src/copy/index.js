@@ -22,7 +22,6 @@ const FACTS = [
   'Alcohol-free',
   'Made in the USA',
   'One month supply',
-  '€49',
   'Digestive Support',
 ];
 
@@ -57,6 +56,16 @@ const BANNED = [
   { re:/\b(european|EU|dutch|netherlands)[- ]?(made|manufactured|formulation|formulated)\b/i, why:'false origin: manufactured in the USA' },
   { re:/\bmade in (europe|the eu|the netherlands|holland)\b/i, why:'false origin: manufactured in the USA' },
   { re:/\b(formulated|manufactured|produced)\s+(to|in|under)\s+(the\s+)?(europe|european|eu|dutch)\b/i, why:'false origin: manufactured in the USA' },
+  /* Price is blocked outright. Shopify charges EUR49.00; the landing page shows
+     EUR35.00 / EUR28.50. Until those agree, no ad may state a price. */
+  { re:/(\u20ac|\$|\u00a3)\s?\d/, why:'price blocked: Shopify (EUR49) and landing page (EUR35) disagree' },
+  /* Claims present on the landing page that must never enter an ad. */
+  { re:/\b\d+\+?\s*(lbs|pounds|kg)\b/i, why:'weight-loss amount claim \u2014 prohibited by EU Reg 1924/2006 Art.12' },
+  { re:/\bsafe (to use )?with all (medications|medicines|drugs)\b/i, why:'unsupportable universal safety claim' },
+  { re:/\b(health problems? fixed|problems? fixed)\b/i, why:'cure claim' },
+  { re:/\bL-?cells?\b/i, why:'pharmacological mechanism claim' },
+  { re:/\b100%\s*(organic|natural)\b/i, why:'absolute/regulated term' },
+  { re:/\brandomi[sz]ed controlled trial\b/i, why:'clinical-trial claim requires the study on file' },
 ];
 
 /* Placeholders that must be substituted before render. */
