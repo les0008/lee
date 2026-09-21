@@ -224,7 +224,7 @@ module.exports = [
   ]},
 
 { code:'OFFER', name:'Offer & risk reversal', desire:'Conversion',
-  eyebrows:['€49 · 60 capsules','One month supply','Direct from LEAF','Ships from the EU'],
+  eyebrows:['€49 · 60 capsules','One month supply','Direct from LEAF','Free US shipping'],
   headlines:[
     '€49. One month. Sixty capsules.',
     'A month of support for €49.',
@@ -246,7 +246,7 @@ module.exports = [
     'Begin with a single bottle.',
     'One month. Then decide.',
     '€49 for the companion half of your routine.',
-    'Sixty capsules, shipped from the EU.',
+    'Sixty capsules, shipped free to the US.',
     'One price. No tiers.',
     'Start here: one bottle, €49.',
     'A month’s supply, plainly priced.',
@@ -261,7 +261,7 @@ module.exports = [
     'LF-1 — 60 capsules, €49. Two capsules daily. Available at leaf-pure.com.',
     'One bottle is one month. Start there.',
     'Sold by LEAF, a Netherlands-based brand.',
-    'Ships within the EU. Priced in euro.',
+    'Ships from the USA. Priced in euro.',
   ]},
 
 { code:'SOCIAL_PROOF', name:'Social proof', desire:'Conversion',

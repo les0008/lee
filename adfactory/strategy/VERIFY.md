@@ -74,3 +74,90 @@ I am not your regulatory reviewer. Before spending money, have whoever signs
 off on LEAF's claims read `out/manifest.csv` — every headline and subhead in
 all 2,000 assets is in that one file, so a claims review is one pass over ~500
 unique rows rather than 2,000 images.
+
+---
+
+# Addendum — findings from the LEAF policy pages
+
+The LF-1 landing page itself is still unreadable from here (the page-builder
+content is not exposed via the Admin API), but the store's **policy pages were**
+readable through the authenticated Shopify connector. Three things came out of
+them that affect the ads and the funnel.
+
+## 1. Corrected: two false claims were in the first build
+
+LEAF's shipping policy states **"ALL PRODUCTS ARE SHIPPING FROM THE US"**, and
+the product description states manufacture in the USA. The first build contained
+copy that contradicted both:
+
+| Was (wrong) | Now |
+|---|---|
+| `Sixty capsules, shipped from the EU.` | `Sixty capsules, shipped free to the US.` |
+| `Ships within the EU. Priced in euro.` | `Ships from the USA. Priced in euro.` |
+| `Ships from the EU` (eyebrow) | `Free US shipping` |
+| `Formulated to European standards.` | `Sold under European labelling standards.` |
+| `Formulated under European regulation.` | `Claims held to European regulation.` |
+| `European formulation, global routine.` | `European brand, global routine.` |
+| `European formulation standards` (eyebrow) | `European labelling standards` |
+
+The linter now carries **origin-accuracy rules**, so a false origin or
+fulfilment claim throws the build rather than reaching an asset. `EURO_STANDARD`
+is now strictly a *brand and market* claim (LEAF is Dutch; LF-1 is sold into the
+EU under EU labelling rules) and never an origin claim.
+
+## 2. The returns policy undercuts the offer
+
+**14 days, unopened and factory-sealed only.** No refund once a bottle is
+opened.
+
+Zafira Organics — the closest direct competitor, same companion positioning —
+runs a **60-day money-back guarantee**. For a €49 supplement bought by someone
+already spending money on a prescription, a sealed-only return is effectively no
+trial at all.
+
+No ad in the set promises a guarantee, a refund or a risk-free trial, so nothing
+shipped is inconsistent with the policy. But this is a conversion ceiling that
+creative cannot lift. An opened-bottle guarantee would likely move CVR more than
+any headline in this library.
+
+## 3. Landing-page quality is an ad-account risk
+
+Meta reviews destination pages for supplement advertisers. The policy pages
+currently contain:
+
+- unfilled template placeholders: `[all payment methods]`, `[cut-off time, e.g.
+  2:00 PM]`, `[5–15] business days`, `[Mon–Fri, 9:00–17:00 CET]`,
+  `[the FDA / relevant authority]`, `[Shipping Policy]`
+- `Last updated: Last week` as literal published text
+- **three different support addresses** across three pages
+  (`leaf.customerservice.store@`, `leaf.customerservice@`,
+  `leaf.customer.service@`) plus a fourth on the shop record with a typo
+  (`leaf.costumerservice.store@`)
+- leaked editor CSS classes in the page HTML (`font-claude-response-body`,
+  `text-text-100`) from content pasted straight out of a chat window
+
+Fixing these is cheap and materially lowers the odds of a policy review going
+badly. One working support address, used everywhere, is the single highest-value
+fix.
+
+## 4. Competitive read (via search; both sites are egress-blocked)
+
+**Zafira Organics — "Recovery Foundation".** The direct competitor. Same
+companion-to-GLP-1 positioning. Targets three named side effects — brain fog,
+hair loss, digestive — with saffron, copper, zinc, magnesium, B12, L-theanine
+and ginger. 60-day money-back guarantee. Note their trust exposure: multiple
+lookalike domains (`zafiraorganics-us.shop`, `myzafiraorganics.store`,
+`zafiraorganicsofficial.store`) and a circulating "EXPOSED / red flags" video.
+That is LF-1's opening — plain labelling and a real company is a differentiator
+against a competitor with a credibility problem.
+
+**Evolv GLP-1 — `evolvlife.com`.** Not a competitor for the same buyer.
+~$148/30 tablets, "biomimetic" EV1 yeast-derived peptide positioned as a
+*natural alternative* to the drugs. That is replacement positioning at 3× the
+price. It validates the split: Evolv and ColonBroom fight over replacement;
+Zafira and LF-1 are in companion.
+
+**Implication for LF-1.** Zafira covers three side effects; LF-1 is Digestive
+Support only. Narrower is fine — it is a sharper claim — but the `NUTRIENT_GAP`
+angle is what closes the gap, because it explains *why* a companion exists at
+all. That angle should get disproportionate test budget.

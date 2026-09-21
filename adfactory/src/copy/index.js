@@ -49,6 +49,14 @@ const BANNED = [
   { re:/\byou (?:are|'re) (?:overweight|obese|constipated|suffering)\b/i, why:'asserts personal health status' },
   { re:/\bdo you (?:suffer|struggle) (?:from|with)\b/i, why:'asserts personal health status' },
   { re:/\byour (?:obesity|constipation|illness|disease|condition)\b/i, why:'asserts personal health status' },
+  /* Origin accuracy. LF-1 is MANUFACTURED IN THE USA and, per LEAF's own
+     shipping policy, ALL PRODUCTS SHIP FROM THE US. LEAF is a Netherlands
+     brand selling into the EU — that is a labelling/market claim, never an
+     origin or fulfilment claim. */
+  { re:/\b(shipped|ships|shipping)\s+(from|within)\s+(the\s+)?(EU|Europe)\b/i, why:'false origin: ships from the USA' },
+  { re:/\b(european|EU|dutch|netherlands)[- ]?(made|manufactured|formulation|formulated)\b/i, why:'false origin: manufactured in the USA' },
+  { re:/\bmade in (europe|the eu|the netherlands|holland)\b/i, why:'false origin: manufactured in the USA' },
+  { re:/\b(formulated|manufactured|produced)\s+(to|in|under)\s+(the\s+)?(europe|european|eu|dutch)\b/i, why:'false origin: manufactured in the USA' },
 ];
 
 /* Placeholders that must be substituted before render. */
