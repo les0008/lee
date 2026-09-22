@@ -2,10 +2,10 @@
 /* Visual-treatment plan for the 2000-image set.
 
    Deterministic, not random per-run, so a re-render reproduces the same set.
-   ~75% of concepts sit on one of the three supplied photographs (through a
-   real colour-treatment variant, never a substitute image); ~25% sit on the
-   brand's own generated scenes, for the variety a mixed set needs at this
-   volume, in the ratio the user signed off on when asked. */
+   Every concept sits on one of the three supplied photographs, through a
+   real colour-treatment variant -- never a substitute image, and never a
+   flat/generated scene. A mixed 75/25 photo/generated split shipped first
+   and was rejected outright: "they all need backgrounds. no solid colors." */
 const { PANEL_SLOT } = require('./photo-plan');
 const { GRADES, SOURCES } = require('./plate-variants');
 
@@ -24,11 +24,6 @@ function rng(seed) {
 
 function planFor(c, i, assetPrefix) {
   const r = rng(0x9e3779b9 ^ i);
-  const useGenerated = i % 4 === 0; // 25%
-
-  if (useGenerated) {
-    return { mode: 'generated' };
-  }
 
   // plateBase weighting: stone (empty, takes the bottle at any size/position)
   // is the most flexible, so it carries half the photo-mode volume.
