@@ -82,9 +82,16 @@ async function main() {
     await p.evaluate(`Promise.all([...document.images].map(i => i.complete ? 1 : new Promise(r => { i.onload = i.onerror = r; })))`);
     const st = await p.evaluate('(' + FIT + ')(' + JSON.stringify(fmt.id) + ')');
     if (st === 'OVERFLOW') over++;
-    const name = `LF1_${String(i + 1).padStart(4, '0')}_${c.angle}_${plan.mode === 'photo' ? plan.photoLayout : c.layout}_${fmt.id}.png`;
-    await sharp(await p.screenshot({ type: 'png' }))
-      .png({ palette: true, colours: 180, effort: 6, dither: .6 })
+    // Photo-mode composites are photographic (grain, gradients) and quantize
+    // badly to an indexed PNG palette -- averaged ~500KB with visible dither
+    // versus ~85KB as JPEG at the same visual quality, an 800MB difference
+    // across the full 2000. Generated-mode is flat vector/gradient content,
+    // where palette PNG is both smaller and avoids JPEG banding, so it stays.
+    const photo = plan.mode === 'photo';
+    const ext = photo ? 'jpg' : 'png';
+    const name = `LF1_${String(i + 1).padStart(4, '0')}_${c.angle}_${photo ? plan.photoLayout : c.layout}_${fmt.id}.${ext}`;
+    const shot = sharp(await p.screenshot({ type: 'png' }));
+    await (photo ? shot.jpeg({ quality: 88, mozjpeg: true }) : shot.png({ palette: true, colours: 180, effort: 6, dither: .6 }))
       .toFile(path.join(OUT, name));
     manifest[i] = {
       n: i + 1, file: name, angle: c.angle, mode: plan.mode,

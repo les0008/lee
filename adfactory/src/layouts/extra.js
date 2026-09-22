@@ -54,20 +54,25 @@ def('numberedSteps', ['clinical','trust'], c => {
 
 /* 17 — Marquee band */
 def('marquee', ['bold','any'], c => {
-  const band = c.pick(c.facts, 4).join('  •  ');
+  // A single, un-repeated band, sized to actually fit. The doubled string
+  // ("band  •  band") only reads correctly mid-animation; nothing here
+  // animates a static export, so it rendered as a permanent mid-word clip
+  // at the right edge -- looked like a rendering bug, not a ticker.
+  const band = c.pick(c.facts, 3).join('   •   ');
+  const strip = `<div style="background:var(--accent);color:var(--onAccent);padding:calc(var(--u)*1.8) 0;
+      overflow:hidden;white-space:nowrap;text-align:center;text-overflow:ellipsis">
+    <div style="font-family:var(--ui);font-size:calc(var(--u)*2.1);letter-spacing:.14em;text-transform:uppercase;
+        display:inline-block;overflow:hidden;text-overflow:ellipsis;max-width:94%;vertical-align:top">${esc(band)}</div>
+  </div>`;
   return `<div style="height:100%;display:flex;flex-direction:column">
-    <div style="background:var(--accent);color:var(--onAccent);padding:calc(var(--u)*1.8) 0;overflow:hidden;white-space:nowrap">
-      <div style="font-family:var(--ui);font-size:calc(var(--u)*2.3);letter-spacing:.16em;text-transform:uppercase">${esc(band)}  •  ${esc(band)}</div>
-    </div>
+    ${strip}
     <div class="pad" style="flex:1;display:flex;flex-direction:column;gap:calc(var(--u)*3);justify-content:center">
       <div class="eyebrow">${esc(c.eyebrow)}</div>
       ${headline(c)}
       <div class="soft" style="font-size:calc(var(--u)*2.8);line-height:1.5;max-width:88%">${esc(c.subhead)}</div>
       ${ctaPill(c)}
     </div>
-    <div style="background:var(--accent);color:var(--onAccent);padding:calc(var(--u)*1.8) 0;overflow:hidden;white-space:nowrap">
-      <div style="font-family:var(--ui);font-size:calc(var(--u)*2.3);letter-spacing:.16em;text-transform:uppercase">${esc(band)}  •  ${esc(band)}</div>
-    </div>
+    ${strip}
   </div>`;
 });
 
