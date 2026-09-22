@@ -8,7 +8,7 @@
     "slot": null,
     "palette": "leafDeep",
     "headline": "Built for a GLP-1 gut.",
-    "subhead": "Daily digestive support · 60 capsules",
+    "subhead": "Daily digestive support. 60 capsules.",
     "eyebrow": "Digestive support",
     "cta": "Shop LF-1"
   },
@@ -21,7 +21,7 @@
     "slot": null,
     "palette": "leafCream",
     "headline": "We take care of your GLP-1 sides.",
-    "subhead": "LF-1 is daily digestive support made for people on a GLP-1.",
+    "subhead": "Daily support, made for GLP-1 users.",
     "eyebrow": "Daily digestive support",
     "cta": "Shop LF-1"
   },
@@ -33,7 +33,7 @@
     "plate": "stone",
     "slot": "myth",
     "palette": "leafNoir",
-    "headline": "Built for GLP-1 digestion, not general wellness.",
+    "headline": "Built for GLP-1 digestion.",
     "subhead": "Two capsules daily. 60 per bottle.",
     "eyebrow": "Digestive support",
     "cta": "See the formula"
@@ -47,8 +47,8 @@
     "slot": "compare",
     "palette": "leafCream",
     "headline": "No laxatives in the formula.",
-    "subhead": "Digestive Support · two capsules daily.",
-    "eyebrow": "What’s in it, what isn’t",
+    "subhead": "Two capsules daily.",
+    "eyebrow": "What’s in it",
     "cta": "Read the label"
   },
   {
@@ -59,8 +59,8 @@
     "plate": "stone",
     "slot": "label",
     "palette": "leafDeep",
-    "headline": "Digestive support that fits the protocol.",
-    "subhead": "Category: Digestive Support. Dose: two capsules daily.",
+    "headline": "Digestive support built for the protocol.",
+    "subhead": "Two capsules daily.",
     "eyebrow": "LF-1 at a glance",
     "cta": "See the formula"
   },
@@ -72,8 +72,8 @@
     "plate": "stone",
     "slot": null,
     "palette": "leafCream",
-    "headline": "Made for how a GLP-1 actually works.",
-    "subhead": "Designed around slower gastric emptying, not general gut health.",
+    "headline": "Made for how a GLP-1 works.",
+    "subhead": "Not general gut health.",
     "eyebrow": "Gut-first formulation",
     "cta": "Learn more"
   },
@@ -86,7 +86,7 @@
     "slot": null,
     "palette": "sage",
     "headline": "Your gut is on this journey too.",
-    "subhead": "Daily digestive support for people on a GLP-1.",
+    "subhead": "Daily support for GLP-1 users.",
     "eyebrow": "Digestive support",
     "cta": "Shop LF-1"
   },
@@ -99,7 +99,7 @@
     "slot": null,
     "palette": "leafNoir",
     "headline": "Finally, a GLP-1 morning that feels normal.",
-    "subhead": "Built around the routine, not around the scale.",
+    "subhead": "Built around the routine.",
     "eyebrow": "For life on a GLP-1",
     "cta": "Shop LF-1"
   },
@@ -111,8 +111,8 @@
     "plate": "stone",
     "slot": null,
     "palette": "leafDeep",
-    "headline": "Your GLP-1 is doing its job. LF-1 handles the rest.",
-    "subhead": "A daily digestive companion for the part nobody briefs you on.",
+    "headline": "Your GLP-1 handles the rest. LF-1 handles this.",
+    "subhead": "A daily digestive companion.",
     "eyebrow": "The companion capsule",
     "cta": "Get LF-1"
   },
@@ -125,7 +125,7 @@
     "slot": null,
     "palette": "leafCream",
     "headline": "Feel like yourself again.",
-    "subhead": "A companion to your GLP-1 · never a replacement",
+    "subhead": "A companion to your GLP-1.",
     "eyebrow": "For life on a GLP-1",
     "cta": "Shop LF-1"
   },
@@ -138,7 +138,7 @@
     "slot": null,
     "palette": "leafDeep",
     "headline": "The companion your GLP-1 came without.",
-    "subhead": "Two capsules each morning. 60 per bottle.",
+    "subhead": "Two capsules each morning.",
     "eyebrow": "The companion capsule",
     "cta": "Shop LF-1"
   },
@@ -151,7 +151,7 @@
     "slot": null,
     "palette": "leafCream",
     "headline": "The missing half of your GLP-1 routine.",
-    "subhead": "One simple daily step alongside your GLP-1.",
+    "subhead": "One simple daily step.",
     "eyebrow": "The companion capsule",
     "cta": "Learn more"
   },
@@ -164,7 +164,7 @@
     "slot": null,
     "palette": "leafCream",
     "headline": "Eating less doesn’t mean needing less.",
-    "subhead": "A GLP-1 reduces appetite — and everything that comes in with food.",
+    "subhead": "A GLP-1 cuts intake, not requirements.",
     "eyebrow": "The intake question",
     "cta": "See the formula"
   },
@@ -177,7 +177,7 @@
     "slot": "compare",
     "palette": "leafNoir",
     "headline": "Smaller plates. Same requirements.",
-    "subhead": "Formulated for people eating substantially less than before.",
+    "subhead": "Eating substantially less than before.",
     "eyebrow": "Smaller plates, same needs",
     "cta": "Learn more"
   },
@@ -190,7 +190,7 @@
     "slot": "stat",
     "palette": "leafDeep",
     "headline": "Your appetite dropped. Your needs didn’t.",
-    "subhead": "Two capsules daily, taken alongside your routine.",
+    "subhead": "Two capsules daily.",
     "eyebrow": "The intake question",
     "cta": "Shop LF-1"
   },
@@ -203,7 +203,7 @@
     "slot": "myth",
     "palette": "leafCream",
     "headline": "A GLP-1 changes intake. Plan for it.",
-    "subhead": "Daily support for people eating far less than before.",
+    "subhead": "Daily support, made for less.",
     "eyebrow": "The intake question",
     "cta": "Learn more"
   },
@@ -216,7 +216,7 @@
     "slot": null,
     "palette": "sage",
     "headline": "The maths nobody does on a GLP-1.",
-    "subhead": "When portions shrink, everything that comes in with food shrinks too.",
+    "subhead": "Smaller portions, same daily needs.",
     "eyebrow": "The intake question",
     "cta": "See the formula"
   },
@@ -229,7 +229,7 @@
     "slot": null,
     "palette": "leafCream",
     "headline": "A companion, never a replacement.",
-    "subhead": "LF-1 does not replace your GLP-1. It sits alongside it.",
+    "subhead": "LF-1 sits alongside your GLP-1.",
     "eyebrow": "Your GLP-1 companion",
     "cta": "Learn more"
   },
@@ -242,7 +242,7 @@
     "slot": "compare",
     "palette": "leafDeep",
     "headline": "Built for injections and oral GLP-1s alike.",
-    "subhead": "One daily companion, whichever route you’re on.",
+    "subhead": "One daily companion, either way.",
     "eyebrow": "Your GLP-1 companion",
     "cta": "Shop LF-1"
   },
@@ -254,8 +254,8 @@
     "plate": "stone",
     "slot": null,
     "palette": "leafNoir",
-    "headline": "Purpose-built to complement, not compete.",
-    "subhead": "A companion to your GLP-1 · never a replacement",
+    "headline": "Built to complement, not compete.",
+    "subhead": "A companion to your GLP-1.",
     "eyebrow": "The companion capsule",
     "cta": "Shop LF-1"
   },
@@ -268,7 +268,7 @@
     "slot": null,
     "palette": "sand",
     "headline": "The other half of the protocol.",
-    "subhead": "A companion to your GLP-1 — never a replacement for it.",
+    "subhead": "Never a replacement for it.",
     "eyebrow": "The companion capsule",
     "cta": "Learn more"
   },
@@ -281,7 +281,7 @@
     "slot": "steps",
     "palette": "leafCream",
     "headline": "Month one is easy. LF-1 is for month four.",
-    "subhead": "Built for the long stretch, not the first week.",
+    "subhead": "Built for the long stretch.",
     "eyebrow": "Built for the long stretch",
     "cta": "Start with one month"
   },
@@ -293,8 +293,8 @@
     "plate": "sand",
     "slot": "myth",
     "palette": "leafDeep",
-    "headline": "Support the course you already committed to.",
-    "subhead": "Made for people who intend to finish.",
+    "headline": "Support the course you committed to.",
+    "subhead": "For people who intend to finish.",
     "eyebrow": "For the full course",
     "cta": "Learn more"
   },
@@ -307,7 +307,7 @@
     "slot": null,
     "palette": "leafNoir",
     "headline": "Built for people who don’t quit.",
-    "subhead": "A daily habit for a long commitment.",
+    "subhead": "A daily habit, long term.",
     "eyebrow": "Month three and beyond",
     "cta": "Shop LF-1"
   },
@@ -320,7 +320,7 @@
     "slot": null,
     "palette": "leafDeep",
     "headline": "GLP-1? Think beyond fiber.",
-    "subhead": "A GLP-1 slows gastric emptying — support should account for that.",
+    "subhead": "A GLP-1 slows digestion.",
     "eyebrow": "A different approach",
     "cta": "See the formula"
   },
@@ -332,8 +332,8 @@
     "plate": "stone",
     "slot": "compare",
     "palette": "leafCream",
-    "headline": "Why a generic fiber scoop isn’t built for this.",
-    "subhead": "Purpose-built rather than general-purpose.",
+    "headline": "Why a fiber scoop isn’t built for this.",
+    "subhead": "Purpose-built, not general-purpose.",
     "eyebrow": "Not another fiber scoop",
     "cta": "Learn more"
   },
@@ -359,7 +359,7 @@
     "slot": null,
     "palette": "leafCream",
     "headline": "Whole ingredients. Zero compromise.",
-    "subhead": "Non-GMO · Vegetarian · Allergen-free",
+    "subhead": "Non-GMO · Vegetarian.",
     "eyebrow": "Read the label",
     "cta": "Read the label"
   },
@@ -372,7 +372,7 @@
     "slot": "badges",
     "palette": "leafDeep",
     "headline": "Eight things LF-1 isn’t.",
-    "subhead": "Everything on the label, nothing behind it.",
+    "subhead": "Everything on the label.",
     "eyebrow": "Plainly labelled",
     "cta": "Read the label"
   },
@@ -385,7 +385,7 @@
     "slot": "label",
     "palette": "leafNoir",
     "headline": "Read the label. That’s the pitch.",
-    "subhead": "60 vegetarian capsules. Two daily.",
+    "subhead": "60 vegetarian capsules.",
     "eyebrow": "Plainly labelled",
     "cta": "See the formula"
   },
@@ -398,7 +398,7 @@
     "slot": "steps",
     "palette": "leafCream",
     "headline": "Two capsules. Every morning. That’s it.",
-    "subhead": "Capsule format. No powder, no shaker, no flavour to tolerate.",
+    "subhead": "No powder. No shaker.",
     "eyebrow": "The daily step",
     "cta": "Shop LF-1"
   },
@@ -411,7 +411,7 @@
     "slot": "stat",
     "palette": "sage",
     "headline": "A month of support for €35.",
-    "subhead": "60 capsules. Two daily. Available at leaf-pure.com.",
+    "subhead": "60 capsules, two daily.",
     "eyebrow": "€35 · 60 capsules",
     "cta": "Start with one month"
   },
@@ -423,8 +423,8 @@
     "plate": "stone",
     "slot": null,
     "palette": "sand",
-    "headline": "Because a GLP-1 doesn’t come with a manual.",
-    "subhead": "Made for people already on a GLP-1 and figuring out the rest.",
+    "headline": "A GLP-1 doesn’t come with a manual.",
+    "subhead": "For the part nobody covers.",
     "eyebrow": "What nobody mentioned",
     "cta": "Learn more"
   },
@@ -436,22 +436,22 @@
     "plate": "sand",
     "slot": null,
     "palette": "leafDeep",
-    "headline": "Everybody covers week one. Nobody covers week nine.",
-    "subhead": "Support for the months after the first appointment.",
+    "headline": "Everybody covers week one. Not week nine.",
+    "subhead": "Support for the months after.",
     "eyebrow": "The missing instructions",
     "cta": "Learn more"
   },
   {
     "n": 35,
-    "file": "LF1_35_EURO_STANDARD_photoTop_sand_4x5.png",
-    "angle": "EURO_STANDARD",
+    "file": "LF1_35_USA_MADE_photoTop_sand_4x5.png",
+    "angle": "USA_MADE",
     "layout": "photoTop",
     "plate": "sand",
     "slot": null,
     "palette": "leafCream",
-    "headline": "Regulated market. Honest label.",
-    "subhead": "LEAF is a Netherlands-based brand. LF-1 is manufactured in the USA.",
-    "eyebrow": "European labelling standards",
+    "headline": "Made in the USA.",
+    "subhead": "Every bottle, every batch.",
+    "eyebrow": "Made in the USA",
     "cta": "Learn more"
   }
 ]

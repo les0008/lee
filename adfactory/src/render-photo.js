@@ -14,16 +14,18 @@ const CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const ROOT = path.join(__dirname, '..'), BUILD = path.join(ROOT, 'build'), OUT = path.join(ROOT, 'out', 'photo35');
 const FIT = fs.readFileSync(path.join(__dirname, 'render.js'), 'utf8').match(/const FIT_SCRIPT = `([\s\S]*?)`;/)[1];
 
-// Type is chosen off the ad's assigned palette so the set keeps its variety
-// even where the photo layouts override the colours.
-const TS_FOR = { leafCream: 'editorial', leafDeep: 'editorial', leafNoir: 'grotesk', sage: 'humanist', sand: 'luxe' };
+// One typeset across the whole set: a medium-weight sans, not a display face.
+// The reference ads (GLP-1 SOS, Zafira, Evolv) never run a loud headline font
+// on a photograph — it fights the image. Varying the typeset per palette was
+// what made several of these read as too bold.
+const TS = TYPESETS.find(t => t.id === 'clean');
 
 function html(c, fmt) {
   // Full-bleed layouts run white-on-photo; the panel layout keeps the ad's own
   // palette, because its type sits on an opaque block rather than the picture.
   const panel = c.photoLayout === 'photoPanel';
   const pal = panel ? PALETTE_BY_ID[c.palette] : PLAN.PHOTO_PALETTE;
-  const ts = TYPESETS.find(t => t.id === (TS_FOR[c.palette] || 'grotesk'));
+  const ts = TS;
   const ctx = Object.assign({}, c, { fmt, pal, ts, pick: (a, n) => a.slice(0, n) });
   const inner = LAYOUTS[c.photoLayout].fn(ctx);
 

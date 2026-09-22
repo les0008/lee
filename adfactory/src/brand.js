@@ -58,6 +58,11 @@ const TYPESETS = [
   { id:'luxe',      moods:['premium','warm','editorial'],display:'fraunces',  dTrack:'-0.02em',  dCase:'none',      body:'manrope', ui:'interMd' },
   { id:'condensed', moods:['bold','clinical'],           display:'bebas',     dTrack:'0.01em',   dCase:'uppercase', body:'dmsans',  ui:'interSb' },
   { id:'humanist',  moods:['calm','clinical','editorial'],display:'manropeBd',dTrack:'-0.02em',  dCase:'none',      body:'inter',   ui:'interMd' },
+  /* Medium weight, not a display face — this is what the reference ads
+     (GLP-1 SOS, Zafira, Evolv) actually run: a clean sans headline, never
+     a shouting all-caps display font. Used on the photo layouts, where a
+     loud face fights the photograph instead of sitting on it. */
+  { id:'clean',     moods:['bold','premium','editorial','warm','calm','clinical'],display:'archivoMd',dTrack:'-0.01em',dCase:'none', body:'inter', ui:'interMd' },
 ];
 
 /* ---- Canvas formats ------------------------------------------------------- */

@@ -57,6 +57,14 @@ const BANNED = [
   { re:/\b(european|EU|dutch|netherlands)[- ]?(made|manufactured|formulation|formulated)\b/i, why:'false origin: manufactured in the USA' },
   { re:/\bmade in (europe|the eu|the netherlands|holland)\b/i, why:'false origin: manufactured in the USA' },
   { re:/\b(formulated|manufactured|produced)\s+(to|in|under)\s+(the\s+)?(europe|european|eu|dutch)\b/i, why:'false origin: manufactured in the USA' },
+  { re:/\bnetherlands\b/i, why:'brand HQ claim not to be advertised — lead with USA manufacture instead' },
+  /* The landing page claims a 60-day money-back guarantee; the published
+     Refund & Return Policy only honours a 14-day, unopened, factory-seal
+     return. Until those agree, no ad may promise a guarantee or refund. */
+  { re:/\b(money.?back|refund(ed)?|risk.?free|\d+[- ]day guarantee)\b/i, why:'guarantee contradicts the 14-day sealed-only return policy' },
+  { re:/\bguarantee[sd]?\b/i, why:'guarantee contradicts the 14-day sealed-only return policy' },
+  /* No confirmed free-shipping policy. */
+  { re:/\bfree shipping\b/i, why:'shipping cost not confirmed — do not claim free shipping' },
   /* Price is blocked outright. Shopify charges EUR49.00; the landing page shows
      EUR35.00 / EUR28.50. Until those agree, no ad may state a price. */
   /* Shopify variant and landing page now agree at EUR35.00 (verified). Only

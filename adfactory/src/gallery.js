@@ -4,7 +4,7 @@ const m=require('../out/photo35.json');
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const ANGLES=[...new Set(m.map(a=>a.angle))];
 const LABEL={GI_SPECIFIC:'Digestive',FINALLY_NORMAL:'Relief',NUTRIENT_GAP:'Nutrient gap',COMPANION:'Companion',
-  STAY_COURSE:'Retention',FIBER_FAILS:'Mechanism',CLEAN_LABEL:'Clean label',RITUAL:'Ritual',NO_MANUAL:'No manual',EURO_STANDARD:'Standards'};
+  STAY_COURSE:'Retention',FIBER_FAILS:'Mechanism',CLEAN_LABEL:'Clean label',RITUAL:'Ritual',NO_MANUAL:'No manual',USA_MADE:'USA made'};
 
 const cards = m.map(a=>`
   <article class="card" data-angle="${a.angle}" data-n="${a.n}">
@@ -92,7 +92,17 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,54px);line-
 </div>
 <div class="grid" id="grid">${cards}</div>
 <div class="note">
-  <h2>Before these go live</h2>
+  <h2>What changed this round</h2>
+  <p><b>Copy cut down.</b> Every card is now headline + one short line, max. The comparison and myth panels
+  dropped to two items a side instead of three sentences each.</p>
+  <p><b>One typeface, medium weight.</b> The mixed display faces (Anton, Archivo Bold, Manrope Bold) are gone —
+  every headline now runs in the same medium-weight sans, closer to the GLP-1 SOS / Zafira / Evolv references.</p>
+  <p><b>Capsule centering fixed.</b> The sand-plate panel ads (04, 14, 19, 23, 29, 31) were using crop offsets
+  tuned for the bottle plate; the capsule now sits dead-center on every one of them.</p>
+  <p><b>The Netherlands claim is gone.</b> Ad 35 no longer says LEAF is Netherlands-based — it's now a plain
+  "Made in the USA" trust card, and the compliance linter now hard-blocks any future "Netherlands", "guarantee"
+  or "free shipping" claim (the landing page's 60-day guarantee contradicts the published 14-day, sealed-only
+  return policy, so no ad promises one).</p>
   <p><b>Backgrounds and product are yours.</b> The three photographs you sent are the plates: the type
   burnt into them was removed, the bottle was cut out of the dark scene so it can be placed freely, and the
   ledge shot was emptied of both so the frame is reusable. Nothing here is a competitor's photography.</p>
