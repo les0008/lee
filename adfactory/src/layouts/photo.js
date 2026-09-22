@@ -43,8 +43,7 @@ def('photoTop', ['photo'], c => {
   const hs = shapeVals(sh, { wide: 6.2, square: 8.2, tall: 9.2, xtall: 10 });
   return `<div style="height:100%;display:flex;flex-direction:column;text-align:center;
       padding:calc(var(--u)*${shapeVals(sh, { wide: 6, tall: 8 })}) calc(var(--u)*7) calc(var(--u)*7)">
-    <div style="display:flex;flex-direction:column;gap:calc(var(--u)*2.6);align-items:center">
-      <div class="eyebrow">${txt(c.eyebrow)}</div>
+    <div style="display:flex;flex-direction:column;align-items:center">
       <div style="max-width:92%">${headline(c, `text-align:center;font-size:calc(var(--u)*${hs})`)}</div>
     </div>
     <div style="flex:1 1 auto;min-height:calc(var(--u)*${shapeVals(sh, { wide: 16, square: 24, tall: 28, xtall: 32 })});
@@ -68,7 +67,6 @@ def('photoLower', ['photo'], c => {
       ${bottle(c, shapeVals(sh, { wide: 22, square: 32, tall: 36, xtall: 42 }), 'flex-start')}
     </div>
     <div style="display:flex;flex-direction:column;gap:calc(var(--u)*3)">
-      <div class="eyebrow">${txt(c.eyebrow)}</div>
       <div style="max-width:94%">${headline(c, `font-size:calc(var(--u)*${hs})`)}</div>
       <div class="soft" style="font-size:calc(var(--u)*${shapeVals(sh, { wide: 2.4, tall: 2.9 })});line-height:1.45;max-width:86%">${txt(c.subhead)}</div>
       <div><span class="cta">${esc(c.cta)}</span></div>
@@ -84,7 +82,6 @@ def('photoSide', ['photo'], c => {
   return `<div style="height:100%;display:flex;flex-direction:column;padding:calc(var(--u)*7)">
     <div style="flex:1;min-height:0;display:flex;align-items:center;gap:calc(var(--u)*5)">
       <div style="flex:1.5;min-width:0;padding-right:calc(var(--u)*1.5);display:flex;flex-direction:column;gap:calc(var(--u)*3)">
-        <div class="eyebrow">${txt(c.eyebrow)}</div>
         ${headline(c, `font-size:calc(var(--u)*${hs})`)}
         <div class="soft" style="font-size:calc(var(--u)*${shapeVals(sh, { wide: 2.3, tall: 2.7 })});line-height:1.45">${txt(c.subhead)}</div>
         <div><span class="cta">${esc(c.cta)}</span></div>
@@ -111,7 +108,7 @@ const SLOTS = {
     const col = (title, items, accent) => `<div style="flex:1;display:flex;flex-direction:column;gap:calc(var(--u)*1.6)">
       <div style="font-family:var(--ui);font-size:calc(var(--u)*2.2);letter-spacing:.1em;text-transform:uppercase;
         color:${accent ? 'var(--accent)' : 'var(--soft)'}">${txt(title)}</div>
-      ${items.slice(0, 2).map(i => `<div style="font-size:calc(var(--u)*2.3);line-height:1.35;${accent ? '' : 'opacity:.72'}">${txt(i)}</div>`).join('')}
+      ${items.slice(0, 1).map(i => `<div style="font-size:calc(var(--u)*2.3);line-height:1.35;${accent ? '' : 'opacity:.72'}">${txt(i)}</div>`).join('')}
     </div>`;
     return `<div style="display:flex;gap:calc(var(--u)*4)">
       ${col(p.aTitle, p.a, false)}
@@ -120,12 +117,9 @@ const SLOTS = {
     </div>`;
   },
 
-  myth: c => `<div style="display:flex;flex-direction:column;gap:calc(var(--u)*2)">
-    <div style="font-size:calc(var(--u)*2.5);line-height:1.35;opacity:.55;text-decoration:line-through">${txt(c.mythPair.myth)}</div>
-    <div style="display:flex;gap:calc(var(--u)*2);align-items:flex-start">
+  myth: c => `<div style="display:flex;gap:calc(var(--u)*2);align-items:flex-start">
       <div style="flex:none;width:calc(var(--u)*1);align-self:stretch;background:var(--accent);border-radius:calc(var(--u)*.5)"></div>
       <div style="font-size:calc(var(--u)*2.7);line-height:1.4">${txt(c.subhead)}</div>
-    </div>
   </div>`,
 
   stat: c => `<div style="display:flex;align-items:baseline;gap:calc(var(--u)*3)">
@@ -134,19 +128,19 @@ const SLOTS = {
   </div>`,
 
   steps: c => `<div style="display:flex;flex-direction:column;gap:calc(var(--u)*1.6)">
-    ${c.timelineSteps.map((s, i) => `<div style="display:flex;gap:calc(var(--u)*2);align-items:baseline">
+    ${c.timelineSteps.slice(0, 2).map((s, i) => `<div style="display:flex;gap:calc(var(--u)*2);align-items:baseline">
       <div style="flex:none;font-family:var(--ui);font-size:calc(var(--u)*2.1);color:var(--accent)">${String(i + 1).padStart(2, '0')}</div>
       <div style="font-size:calc(var(--u)*2.4);line-height:1.35"><b style="font-family:var(--ui);font-weight:400">${txt(s.k)}</b> · ${txt(s.v)}</div>
     </div>`).join('')}
   </div>`,
 
   badges: c => `<div style="display:flex;flex-wrap:wrap;gap:calc(var(--u)*1.4)">
-    ${BRAND.certs.map(t => `<div style="font-family:var(--ui);font-size:calc(var(--u)*2);padding:calc(var(--u)*1.1) calc(var(--u)*2.2);
+    ${BRAND.certs.slice(0, 4).map(t => `<div style="font-family:var(--ui);font-size:calc(var(--u)*2);padding:calc(var(--u)*1.1) calc(var(--u)*2.2);
       border:1px solid var(--line);border-radius:calc(var(--u)*6)">${txt(t)}</div>`).join('')}
   </div>`,
 
   label: c => {
-    const rows = [['Category', 'Digestive Support'], ['Dose', BRAND.dose], ['Bottle', BRAND.capsules], ['Form', 'Vegetarian capsule']];
+    const rows = [['Dose', BRAND.dose], ['Bottle', BRAND.capsules], ['Form', 'Vegetarian capsule']];
     return `<div style="display:flex;flex-direction:column">
       ${rows.map(([k, v]) => `<div style="display:flex;justify-content:space-between;gap:calc(var(--u)*3);
         padding:calc(var(--u)*1.5) 0;border-top:1px solid var(--line);font-size:calc(var(--u)*2.3)">
@@ -174,7 +168,6 @@ def('photoPanel', ['photo'], c => {
     </div>
     <div class="panel" style="flex:1;background:var(--bg);color:var(--ink);padding:calc(var(--u)*6) calc(var(--u)*7);
         display:flex;flex-direction:column;gap:calc(var(--u)*2.8)">
-      <div class="eyebrow">${txt(c.eyebrow)}</div>
       ${headline(c, `font-size:calc(var(--u)*${hs})`)}
       <div style="flex:1;display:flex;flex-direction:column;justify-content:center">${slot}</div>
       <div style="display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*3);flex-wrap:wrap">
