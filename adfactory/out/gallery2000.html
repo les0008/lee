@@ -1,0 +1,2074 @@
+<title>LF-1 · 2000-Image Set (sample)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#FCFCF7; --surface:#FFFFFF; --ink:#14231C; --soft:#5E6B63; --line:#E6E2D6;
+  --accent:#C8901A; --chip:#F1EDE1;
+  --serif:'Instrument Serif',Georgia,serif; --sans:'Inter',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F120F; --surface:#171B17; --ink:#F2F0E6; --soft:#9AA79D; --line:#262B26; --chip:#20261F;}}
+:root[data-theme="dark"]{--bg:#0F120F; --surface:#171B17; --ink:#F2F0E6; --soft:#9AA79D; --line:#262B26; --chip:#20261F;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);margin:0;padding-inline:20px;padding-block:0 56px;line-height:1.5}
+.wrap{max-width:1360px;margin:0 auto}
+header{padding-block:40px 20px;border-bottom:1px solid var(--line)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin:0 0 10px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(30px,5vw,46px);line-height:1.05;margin:0 0 12px}
+.lede{margin:0;max-width:70ch;color:var(--soft);font-size:14.5px}
+.stats{display:flex;flex-wrap:wrap;gap:22px;margin-top:18px;font-family:var(--mono);font-size:12px;color:var(--soft)}
+.stats b{color:var(--ink);font-weight:500}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding-block:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.f{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--soft);cursor:pointer}
+.f[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px;padding-block:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.shot{background:var(--chip)}
+.shot img{display:block;width:100%;height:auto}
+.meta{padding:11px 12px 12px;display:flex;flex-direction:column;gap:6px}
+.row{display:flex;align-items:center;gap:7px}
+.row.spread{margin-top:auto;padding-top:3px}
+.num{font-family:var(--mono);font-size:11px;color:var(--soft)}
+.chip{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;background:var(--chip);color:var(--soft);padding:2px 7px;border-radius:999px}
+.chip.mode{opacity:.7}
+.hl{font-family:var(--serif);font-size:16.5px;line-height:1.16;margin:0}
+.sub{margin:0;font-size:11.5px;color:var(--soft);line-height:1.4}
+.mono{font-family:var(--mono);font-size:9.5px;color:var(--soft)}
+.note{margin-top:30px;padding:18px 20px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:4px;background:var(--surface)}
+.note h2{font-family:var(--serif);font-weight:400;font-size:20px;margin:0 0 8px}
+.note p{margin:0 0 8px;font-size:13.5px;color:var(--soft);max-width:74ch}
+.note b{color:var(--ink);font-weight:500}
+</style>
+<div class="wrap">
+<header>
+  <p class="kicker">LEAF · LF-1 · a sample of 2000, evenly spread</p>
+  <h1>220 of 2000, sampled across the whole set.</h1>
+  <p class="lede">Every 9th concept, not the first 220 — so this represents every angle, both background modes,
+  and all eighteen photo-plate grades rather than clustering on whatever rendered first. The full 2000 are committed to the repo.</p>
+  <div class="stats">
+    <span><b>2000</b> total rendered</span><span><b>220</b> shown here</span>
+    <span><b>1500</b> on your photos</span><span><b>500</b> generated</span>
+    <span><b>0</b> overflow</span>
+  </div>
+</header>
+<div class="bar" id="bar">
+  <button class="f" data-a="all" aria-pressed="true">All</button>
+  <button class="f" data-a="FINALLY_NORMAL" aria-pressed="false">Relief</button><button class="f" data-a="GI_SPECIFIC" aria-pressed="false">Digestive</button><button class="f" data-a="STAY_COURSE" aria-pressed="false">Retention</button><button class="f" data-a="FIBER_FAILS" aria-pressed="false">Mechanism</button><button class="f" data-a="COMPANION" aria-pressed="false">Companion</button><button class="f" data-a="NO_MANUAL" aria-pressed="false">No manual</button><button class="f" data-a="USA_MADE" aria-pressed="false">USA made</button><button class="f" data-a="RITUAL" aria-pressed="false">Ritual</button><button class="f" data-a="CLEAN_LABEL" aria-pressed="false">Clean label</button><button class="f" data-a="PRACTITIONER" aria-pressed="false">Practitioner</button><button class="f" data-a="NUTRIENT_GAP" aria-pressed="false">Nutrient gap</button><button class="f" data-a="CONFIDENCE" aria-pressed="false">Confidence</button><button class="f" data-a="OFFER" aria-pressed="false">Offer</button>
+  <span style="width:1px;height:18px;background:var(--line);margin:0 4px"></span>
+  <button class="f" data-m="all" aria-pressed="true">Photo + generated</button>
+  <button class="f" data-m="photo" aria-pressed="false">Photo only</button>
+  <button class="f" data-m="generated" aria-pressed="false">Generated only</button>
+</div>
+<div class="grid" id="grid">
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="generated" data-n="1">
+    <div class="shot"><img src="ads/0001.png" alt="Finally, a GLP-1 morning that feels normal." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1</span><span class="chip">Relief</span><span class="chip mode">generated</span></div>
+      <p class="hl">Finally, a GLP-1 morning that feels normal.</p>
+      <p class="sub">Built around the routine, not around the scale.</p>
+      <div class="row spread"><span class="mono">gradientHero</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="10">
+    <div class="shot"><img src="ads/0010.jpg" alt="The companion your GLP-1 came without." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">10</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">The companion your GLP-1 came without.</p>
+      <p class="sub">One simple daily step alongside your GLP-1.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="19">
+    <div class="shot"><img src="ads/0019.jpg" alt="The quiet part of the journey, handled." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">19</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">The quiet part of the journey, handled.</p>
+      <p class="sub">Digestive support, formulated for GLP-1 routines.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="28">
+    <div class="shot"><img src="ads/0028.jpg" alt="For everything the prescription didn’t mention." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">28</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">For everything the prescription didn’t mention.</p>
+      <p class="sub">Two capsules each morning. 60 per bottle.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="generated" data-n="37">
+    <div class="shot"><img src="ads/0037.png" alt="Finally. Mornings that feel like yours." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">37</span><span class="chip">Relief</span><span class="chip mode">generated</span></div>
+      <p class="hl">Finally. Mornings that feel like yours.</p>
+      <p class="sub">One simple daily step alongside your GLP-1.</p>
+      <div class="row spread"><span class="mono">quoteCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="46">
+    <div class="shot"><img src="ads/0046.jpg" alt="Because &quot;on track&quot; should feel like it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">46</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Because &quot;on track&quot; should feel like it.</p>
+      <p class="sub">Built around the routine, not around the scale.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="56">
+    <div class="shot"><img src="ads/0056.jpg" alt="Designed for GLP-1 mornings." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">56</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Designed for GLP-1 mornings.</p>
+      <p class="sub">For the mornings your plan depends on.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="generated" data-n="65">
+    <div class="shot"><img src="ads/0065.png" alt="The sides nobody warns you about." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">65</span><span class="chip">Relief</span><span class="chip mode">generated</span></div>
+      <p class="hl">The sides nobody warns you about.</p>
+      <p class="sub">Made for the long stretch, not the first week.</p>
+      <div class="row spread"><span class="mono">stickyNote</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="74">
+    <div class="shot"><img src="ads/0074.jpg" alt="Two capsules. Normal mornings." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">74</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Two capsules. Normal mornings.</p>
+      <p class="sub">One simple daily step alongside your GLP-1.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="83">
+    <div class="shot"><img src="ads/0083.jpg" alt="Stay on plan. Feel better doing it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">83</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Stay on plan. Feel better doing it.</p>
+      <p class="sub">Built around the routine, not around the scale.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="92">
+    <div class="shot"><img src="ads/0092.jpg" alt="Feel normal. Stay the course." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">92</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Feel normal. Stay the course.</p>
+      <p class="sub">Digestive support, formulated for GLP-1 routines.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="generated" data-n="101">
+    <div class="shot"><img src="ads/0101.png" alt="The missing half of your GLP-1 routine." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">101</span><span class="chip">Relief</span><span class="chip mode">generated</span></div>
+      <p class="hl">The missing half of your GLP-1 routine.</p>
+      <p class="sub">One simple daily step alongside your GLP-1.</p>
+      <div class="row spread"><span class="mono">searchBar</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="110">
+    <div class="shot"><img src="ads/0110.jpg" alt="Designed for GLP-1 mornings." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">110</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Designed for GLP-1 mornings.</p>
+      <p class="sub">Digestive support, formulated for GLP-1 routines.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="119">
+    <div class="shot"><img src="ads/0119.jpg" alt="The sides nobody warns you about." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">119</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">The sides nobody warns you about.</p>
+      <p class="sub">Made for the long stretch, not the first week.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="128">
+    <div class="shot"><img src="ads/0128.jpg" alt="Because &quot;on track&quot; should feel like it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">128</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Because &quot;on track&quot; should feel like it.</p>
+      <p class="sub">For the mornings your plan depends on.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="generated" data-n="137">
+    <div class="shot"><img src="ads/0137.png" alt="Your journey. Properly supported." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">137</span><span class="chip">Relief</span><span class="chip mode">generated</span></div>
+      <p class="hl">Your journey. Properly supported.</p>
+      <p class="sub">LF-1 is a daily digestive companion made for people on a GLP-1.</p>
+      <div class="row spread"><span class="mono">stickyNote</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="146">
+    <div class="shot"><img src="ads/0146.jpg" alt="The companion your GLP-1 came without." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">146</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">The companion your GLP-1 came without.</p>
+      <p class="sub">For the mornings your plan depends on.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="156">
+    <div class="shot"><img src="ads/0156.jpg" alt="Designed for GLP-1 mornings." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">156</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Designed for GLP-1 mornings.</p>
+      <p class="sub">Built around the routine, not around the scale.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="generated" data-n="165">
+    <div class="shot"><img src="ads/0165.png" alt="Your GLP-1 is doing its job. LF-1 handles the rest." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">165</span><span class="chip">Relief</span><span class="chip mode">generated</span></div>
+      <p class="hl">Your GLP-1 is doing its job. LF-1 handles the rest.</p>
+      <p class="sub">A companion to your GLP-1 — never a replacement for it.</p>
+      <div class="row spread"><span class="mono">splitPanel</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="174">
+    <div class="shot"><img src="ads/0174.jpg" alt="The quiet part of the journey, handled." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">174</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">The quiet part of the journey, handled.</p>
+      <p class="sub">Built around the routine, not around the scale.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="183">
+    <div class="shot"><img src="ads/0183.jpg" alt="Finally, a GLP-1 morning that feels normal." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">183</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Finally, a GLP-1 morning that feels normal.</p>
+      <p class="sub">Made for the long stretch, not the first week.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="192">
+    <div class="shot"><img src="ads/0192.jpg" alt="For the days your GLP-1 doesn’t cover." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">192</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">For the days your GLP-1 doesn’t cover.</p>
+      <p class="sub">A companion to your GLP-1 — never a replacement for it.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="generated" data-n="201">
+    <div class="shot"><img src="ads/0201.png" alt="Finally, support built for this exact moment." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">201</span><span class="chip">Relief</span><span class="chip mode">generated</span></div>
+      <p class="hl">Finally, support built for this exact moment.</p>
+      <p class="sub">LF-1 is a daily digestive companion made for people on a GLP-1.</p>
+      <div class="row spread"><span class="mono">marquee</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="210">
+    <div class="shot"><img src="ads/0210.jpg" alt="Same goals. Better mornings." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">210</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Same goals. Better mornings.</p>
+      <p class="sub">One simple daily step alongside your GLP-1.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="219">
+    <div class="shot"><img src="ads/0219.jpg" alt="Where your GLP-1 stops, LF-1 starts." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">219</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Where your GLP-1 stops, LF-1 starts.</p>
+      <p class="sub">LF-1 is a daily digestive companion made for people on a GLP-1.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="photo" data-n="228">
+    <div class="shot"><img src="ads/0228.jpg" alt="Finally. Mornings that feel like yours." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">228</span><span class="chip">Relief</span><span class="chip mode">photo</span></div>
+      <p class="hl">Finally. Mornings that feel like yours.</p>
+      <p class="sub">Made for the long stretch, not the first week.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FINALLY_NORMAL" data-mode="generated" data-n="237">
+    <div class="shot"><img src="ads/0237.png" alt="The GLP-1 support that should have come in the box." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">237</span><span class="chip">Relief</span><span class="chip mode">generated</span></div>
+      <p class="hl">The GLP-1 support that should have come in the box.</p>
+      <p class="sub">Two capsules each morning. 60 per bottle.</p>
+      <div class="row spread"><span class="mono">mythFactPill</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="246">
+    <div class="shot"><img src="ads/0246.jpg" alt="Slower digestion deserves smarter support." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">246</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Slower digestion deserves smarter support.</p>
+      <p class="sub">LF-1 is formulated as daily digestive support for people on a GLP-1.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="256">
+    <div class="shot"><img src="ads/0256.jpg" alt="Digestive support that fits the protocol." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">256</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Digestive support that fits the protocol.</p>
+      <p class="sub">Appetite falls on a GLP-1 — digestion changes with it.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="generated" data-n="265">
+    <div class="shot"><img src="ads/0265.png" alt="Gentle, daily, and built for this." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">265</span><span class="chip">Digestive</span><span class="chip mode">generated</span></div>
+      <p class="hl">Gentle, daily, and built for this.</p>
+      <p class="sub">A daily capsule made for GLP-1 digestion.</p>
+      <div class="row spread"><span class="mono">ruleStack</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="274">
+    <div class="shot"><img src="ads/0274.jpg" alt="No laxatives in the formula." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">274</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">No laxatives in the formula.</p>
+      <p class="sub">Category: Digestive Support. Dose: two capsules daily.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="283">
+    <div class="shot"><img src="ads/0283.jpg" alt="Daily digestive support. Nothing dramatic." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">283</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Daily digestive support. Nothing dramatic.</p>
+      <p class="sub">Designed around slower gastric emptying, not general gut health.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="292">
+    <div class="shot"><img src="ads/0292.jpg" alt="Support the system your GLP-1 slows down." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">292</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Support the system your GLP-1 slows down.</p>
+      <p class="sub">Made for the routine you’re already keeping.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="generated" data-n="301">
+    <div class="shot"><img src="ads/0301.png" alt="Your gut is on this journey too." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">301</span><span class="chip">Digestive</span><span class="chip mode">generated</span></div>
+      <p class="hl">Your gut is on this journey too.</p>
+      <p class="sub">Designed around slower gastric emptying, not general gut health.</p>
+      <div class="row spread"><span class="mono">splitPanel</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="310">
+    <div class="shot"><img src="ads/0310.jpg" alt="For the part of the journey nobody posts about." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">310</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">For the part of the journey nobody posts about.</p>
+      <p class="sub">Two capsules with 6–8 oz of water, every morning.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="319">
+    <div class="shot"><img src="ads/0319.jpg" alt="Formulated for slower digestion." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">319</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Formulated for slower digestion.</p>
+      <p class="sub">Two capsules with 6–8 oz of water, every morning.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="328">
+    <div class="shot"><img src="ads/0328.jpg" alt="Your gut is on this journey too." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">328</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Your gut is on this journey too.</p>
+      <p class="sub">Two capsules with 6–8 oz of water, every morning.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="generated" data-n="337">
+    <div class="shot"><img src="ads/0337.png" alt="GLP-1 mornings, made easier." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">337</span><span class="chip">Digestive</span><span class="chip mode">generated</span></div>
+      <p class="hl">GLP-1 mornings, made easier.</p>
+      <p class="sub">Appetite falls on a GLP-1 — digestion changes with it.</p>
+      <div class="row spread"><span class="mono">compare</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="346">
+    <div class="shot"><img src="ads/0346.jpg" alt="When appetite drops, digestion changes. Support it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">346</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">When appetite drops, digestion changes. Support it.</p>
+      <p class="sub">Two capsules with 6–8 oz of water, every morning.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="356">
+    <div class="shot"><img src="ads/0356.jpg" alt="Digestion changes on a GLP-1. Plan for it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">356</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Digestion changes on a GLP-1. Plan for it.</p>
+      <p class="sub">Two capsules with 6–8 oz of water, every morning.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="generated" data-n="365">
+    <div class="shot"><img src="ads/0365.png" alt="Gut support that understands the assignment." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">365</span><span class="chip">Digestive</span><span class="chip mode">generated</span></div>
+      <p class="hl">Gut support that understands the assignment.</p>
+      <p class="sub">Made for the routine you’re already keeping.</p>
+      <div class="row spread"><span class="mono">faqCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="374">
+    <div class="shot"><img src="ads/0374.jpg" alt="Daily support for GLP-1 digestion." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">374</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Daily support for GLP-1 digestion.</p>
+      <p class="sub">Support the gut through the whole course.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="383">
+    <div class="shot"><img src="ads/0383.jpg" alt="The daily step your gut was missing." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">383</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">The daily step your gut was missing.</p>
+      <p class="sub">Category: Digestive Support. Dose: two capsules daily.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="392">
+    <div class="shot"><img src="ads/0392.jpg" alt="Comfort is part of progress." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">392</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Comfort is part of progress.</p>
+      <p class="sub">Made for the routine you’re already keeping.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="generated" data-n="401">
+    <div class="shot"><img src="ads/0401.png" alt="Slower gut. Steadier support." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">401</span><span class="chip">Digestive</span><span class="chip mode">generated</span></div>
+      <p class="hl">Slower gut. Steadier support.</p>
+      <p class="sub">A daily capsule made for GLP-1 digestion.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="410">
+    <div class="shot"><img src="ads/0410.jpg" alt="Built for injections and oral GLP-1s alike." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">410</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Built for injections and oral GLP-1s alike.</p>
+      <p class="sub">A daily capsule made for GLP-1 digestion.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="419">
+    <div class="shot"><img src="ads/0419.jpg" alt="Digestive support that fits the protocol." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">419</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Digestive support that fits the protocol.</p>
+      <p class="sub">Made for the routine you’re already keeping.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="428">
+    <div class="shot"><img src="ads/0428.jpg" alt="Slower gut. Steadier support." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">428</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Slower gut. Steadier support.</p>
+      <p class="sub">A daily capsule made for GLP-1 digestion.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="generated" data-n="437">
+    <div class="shot"><img src="ads/0437.png" alt="GLP-1 mornings, made easier." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">437</span><span class="chip">Digestive</span><span class="chip mode">generated</span></div>
+      <p class="hl">GLP-1 mornings, made easier.</p>
+      <p class="sub">A daily capsule made for GLP-1 digestion.</p>
+      <div class="row spread"><span class="mono">gradientHero</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="446">
+    <div class="shot"><img src="ads/0446.jpg" alt="Because comfort shouldn’t be the trade-off." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">446</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Because comfort shouldn’t be the trade-off.</p>
+      <p class="sub">A daily capsule made for GLP-1 digestion.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="456">
+    <div class="shot"><img src="ads/0456.jpg" alt="GLP-1 mornings, made easier." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">456</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">GLP-1 mornings, made easier.</p>
+      <p class="sub">A daily capsule made for GLP-1 digestion.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="generated" data-n="465">
+    <div class="shot"><img src="ads/0465.png" alt="Gentle, daily, and built for this." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">465</span><span class="chip">Digestive</span><span class="chip mode">generated</span></div>
+      <p class="hl">Gentle, daily, and built for this.</p>
+      <p class="sub">Two capsules with 6–8 oz of water, every morning.</p>
+      <div class="row spread"><span class="mono">checklist</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="474">
+    <div class="shot"><img src="ads/0474.jpg" alt="No laxatives in the formula." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">474</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">No laxatives in the formula.</p>
+      <p class="sub">Category: Digestive Support. Dose: two capsules daily.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="483">
+    <div class="shot"><img src="ads/0483.jpg" alt="Gentle, daily, and built for this." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">483</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Gentle, daily, and built for this.</p>
+      <p class="sub">Two capsules with 6–8 oz of water, every morning.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="GI_SPECIFIC" data-mode="photo" data-n="492">
+    <div class="shot"><img src="ads/0492.jpg" alt="Digestive comfort, on a GLP-1 schedule." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">492</span><span class="chip">Digestive</span><span class="chip mode">photo</span></div>
+      <p class="hl">Digestive comfort, on a GLP-1 schedule.</p>
+      <p class="sub">Category: Digestive Support. Dose: two capsules daily.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="generated" data-n="501">
+    <div class="shot"><img src="ads/0501.png" alt="Don’t quit the plan. Support it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">501</span><span class="chip">Retention</span><span class="chip mode">generated</span></div>
+      <p class="hl">Don’t quit the plan. Support it.</p>
+      <p class="sub">Built for month four, not just week one.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="510">
+    <div class="shot"><img src="ads/0510.jpg" alt="Consistency needs support too." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">510</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Consistency needs support too.</p>
+      <p class="sub">Two capsules daily. 60 per bottle. One month at a time.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="519">
+    <div class="shot"><img src="ads/0519.jpg" alt="Finish what you started." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">519</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Finish what you started.</p>
+      <p class="sub">Made for the long middle of the journey.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="528">
+    <div class="shot"><img src="ads/0528.jpg" alt="For the long, unglamorous middle." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">528</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">For the long, unglamorous middle.</p>
+      <p class="sub">Made for the long middle of the journey.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="generated" data-n="537">
+    <div class="shot"><img src="ads/0537.png" alt="Support the course you already committed to." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">537</span><span class="chip">Retention</span><span class="chip mode">generated</span></div>
+      <p class="hl">Support the course you already committed to.</p>
+      <p class="sub">Made for the long middle of the journey.</p>
+      <div class="row spread"><span class="mono">mythFactPill</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="546">
+    <div class="shot"><img src="ads/0546.jpg" alt="Built for the months, not the moment." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">546</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Built for the months, not the moment.</p>
+      <p class="sub">LF-1 is daily digestive support designed for people staying on a GLP-1.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="556">
+    <div class="shot"><img src="ads/0556.jpg" alt="For the long, unglamorous middle." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">556</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">For the long, unglamorous middle.</p>
+      <p class="sub">A companion for the whole course — not a replacement for it.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="generated" data-n="565">
+    <div class="shot"><img src="ads/0565.png" alt="Consistency needs support too." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">565</span><span class="chip">Retention</span><span class="chip mode">generated</span></div>
+      <p class="hl">Consistency needs support too.</p>
+      <p class="sub">Two capsules daily. 60 per bottle. One month at a time.</p>
+      <div class="row spread"><span class="mono">timeline</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="574">
+    <div class="shot"><img src="ads/0574.jpg" alt="Make month six as easy as month one." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">574</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Make month six as easy as month one.</p>
+      <p class="sub">A companion for the whole course — not a replacement for it.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="583">
+    <div class="shot"><img src="ads/0583.jpg" alt="The goal is to stay on it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">583</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">The goal is to stay on it.</p>
+      <p class="sub">Support the routine you already committed to.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="592">
+    <div class="shot"><img src="ads/0592.jpg" alt="Keep going. Comfortably." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">592</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Keep going. Comfortably.</p>
+      <p class="sub">Built for month four, not just week one.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="generated" data-n="601">
+    <div class="shot"><img src="ads/0601.png" alt="Still on your GLP-1? This is for you." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">601</span><span class="chip">Retention</span><span class="chip mode">generated</span></div>
+      <p class="hl">Still on your GLP-1? This is for you.</p>
+      <p class="sub">Support the routine you already committed to.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="610">
+    <div class="shot"><img src="ads/0610.jpg" alt="Staying on track is the whole game." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">610</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Staying on track is the whole game.</p>
+      <p class="sub">Two capsules daily. 60 per bottle. One month at a time.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="619">
+    <div class="shot"><img src="ads/0619.jpg" alt="Built for the months, not the moment." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">619</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Built for the months, not the moment.</p>
+      <p class="sub">Built for month four, not just week one.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="628">
+    <div class="shot"><img src="ads/0628.jpg" alt="Stay on. Feel steadier." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">628</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Stay on. Feel steadier.</p>
+      <p class="sub">Two capsules daily. 60 per bottle. One month at a time.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="generated" data-n="637">
+    <div class="shot"><img src="ads/0637.png" alt="Your plan deserves a support plan." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">637</span><span class="chip">Retention</span><span class="chip mode">generated</span></div>
+      <p class="hl">Your plan deserves a support plan.</p>
+      <p class="sub">Support the routine you already committed to.</p>
+      <div class="row spread"><span class="mono">timeline</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="646">
+    <div class="shot"><img src="ads/0646.jpg" alt="Stay on. Feel steadier." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">646</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">Stay on. Feel steadier.</p>
+      <p class="sub">Made for the long middle of the journey.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="STAY_COURSE" data-mode="photo" data-n="656">
+    <div class="shot"><img src="ads/0656.jpg" alt="The long game needs a daily habit." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">656</span><span class="chip">Retention</span><span class="chip mode">photo</span></div>
+      <p class="hl">The long game needs a daily habit.</p>
+      <p class="sub">Made for the long middle of the journey.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="generated" data-n="665">
+    <div class="shot"><img src="ads/0665.png" alt="Same problem. Different mechanism." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">665</span><span class="chip">Mechanism</span><span class="chip mode">generated</span></div>
+      <p class="hl">Same problem. Different mechanism.</p>
+      <p class="sub">A GLP-1 slows gastric emptying — support should account for that.</p>
+      <div class="row spread"><span class="mono">splitPanel</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="674">
+    <div class="shot"><img src="ads/0674.jpg" alt="Fiber is a tool. Not the whole toolbox." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">674</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Fiber is a tool. Not the whole toolbox.</p>
+      <p class="sub">Digestive Support, purpose-built rather than general-purpose.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="683">
+    <div class="shot"><img src="ads/0683.jpg" alt="Made for this routine specifically." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">683</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Made for this routine specifically.</p>
+      <p class="sub">A GLP-1 slows gastric emptying — support should account for that.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="692">
+    <div class="shot"><img src="ads/0692.jpg" alt="Why a generic fiber scoop isn’t built for this." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">692</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Why a generic fiber scoop isn’t built for this.</p>
+      <p class="sub">Not a scoop. Not a powder. A daily capsule.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="generated" data-n="701">
+    <div class="shot"><img src="ads/0701.png" alt="Don’t support a GLP-1 gut like an average one." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">701</span><span class="chip">Mechanism</span><span class="chip mode">generated</span></div>
+      <p class="hl">Don’t support a GLP-1 gut like an average one.</p>
+      <p class="sub">A GLP-1 slows gastric emptying — support should account for that.</p>
+      <div class="row spread"><span class="mono">statBlock</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="710">
+    <div class="shot"><img src="ads/0710.jpg" alt="The mechanism is the message." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">710</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">The mechanism is the message.</p>
+      <p class="sub">Not a scoop. Not a powder. A daily capsule.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="719">
+    <div class="shot"><img src="ads/0719.jpg" alt="GLP-1? Think beyond fiber." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">719</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">GLP-1? Think beyond fiber.</p>
+      <p class="sub">Two capsules daily, designed around the routine you’re on.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="728">
+    <div class="shot"><img src="ads/0728.jpg" alt="Don’t support a GLP-1 gut like an average one." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">728</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Don’t support a GLP-1 gut like an average one.</p>
+      <p class="sub">A GLP-1 slows gastric emptying — support should account for that.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="generated" data-n="737">
+    <div class="shot"><img src="ads/0737.png" alt="Precision beats more scoops." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">737</span><span class="chip">Mechanism</span><span class="chip mode">generated</span></div>
+      <p class="hl">Precision beats more scoops.</p>
+      <p class="sub">LF-1 is formulated specifically as digestive support for GLP-1 routines.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="746">
+    <div class="shot"><img src="ads/0746.jpg" alt="A GLP-1 gut isn’t a normal gut." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">746</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">A GLP-1 gut isn’t a normal gut.</p>
+      <p class="sub">Not a scoop. Not a powder. A daily capsule.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="756">
+    <div class="shot"><img src="ads/0756.jpg" alt="Fiber is a tool. Not the whole toolbox." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">756</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Fiber is a tool. Not the whole toolbox.</p>
+      <p class="sub">Digestive Support, purpose-built rather than general-purpose.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="generated" data-n="765">
+    <div class="shot"><img src="ads/0765.png" alt="A specific routine deserves specific support." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">765</span><span class="chip">Mechanism</span><span class="chip mode">generated</span></div>
+      <p class="hl">A specific routine deserves specific support.</p>
+      <p class="sub">LF-1 is formulated specifically as digestive support for GLP-1 routines.</p>
+      <div class="row spread"><span class="mono">faqCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="774">
+    <div class="shot"><img src="ads/0774.jpg" alt="Fiber alone wasn’t designed for this routine." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">774</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Fiber alone wasn’t designed for this routine.</p>
+      <p class="sub">Not a scoop. Not a powder. A daily capsule.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="783">
+    <div class="shot"><img src="ads/0783.jpg" alt="Designed for slower gastric emptying." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">783</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Designed for slower gastric emptying.</p>
+      <p class="sub">LF-1 is formulated specifically as digestive support for GLP-1 routines.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="792">
+    <div class="shot"><img src="ads/0792.jpg" alt="Built for GLP-1 physiology." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">792</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Built for GLP-1 physiology.</p>
+      <p class="sub">Digestive Support, purpose-built rather than general-purpose.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="generated" data-n="801">
+    <div class="shot"><img src="ads/0801.png" alt="Don’t support a GLP-1 gut like an average one." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">801</span><span class="chip">Mechanism</span><span class="chip mode">generated</span></div>
+      <p class="hl">Don’t support a GLP-1 gut like an average one.</p>
+      <p class="sub">Digestive Support, purpose-built rather than general-purpose.</p>
+      <div class="row spread"><span class="mono">contrastPanel</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="810">
+    <div class="shot"><img src="ads/0810.jpg" alt="Not more. Different." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">810</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">Not more. Different.</p>
+      <p class="sub">LF-1 is formulated specifically as digestive support for GLP-1 routines.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="FIBER_FAILS" data-mode="photo" data-n="819">
+    <div class="shot"><img src="ads/0819.jpg" alt="A GLP-1 changes the timing. Support should match." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">819</span><span class="chip">Mechanism</span><span class="chip mode">photo</span></div>
+      <p class="hl">A GLP-1 changes the timing. Support should match.</p>
+      <p class="sub">Two capsules daily, designed around the routine you’re on.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="828">
+    <div class="shot"><img src="ads/0828.jpg" alt="Two things in your routine. One works on the gut." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">828</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">Two things in your routine. One works on the gut.</p>
+      <p class="sub">Take two capsules daily alongside your existing routine.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="generated" data-n="837">
+    <div class="shot"><img src="ads/0837.png" alt="Purpose-built to complement, not compete." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">837</span><span class="chip">Companion</span><span class="chip mode">generated</span></div>
+      <p class="hl">Purpose-built to complement, not compete.</p>
+      <p class="sub">LF-1 is a daily digestive companion — it does not replace your GLP-1.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="846">
+    <div class="shot"><img src="ads/0846.jpg" alt="One job, done daily." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">846</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">One job, done daily.</p>
+      <p class="sub">60 capsules. One month. One simple job.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="856">
+    <div class="shot"><img src="ads/0856.jpg" alt="The second half of the protocol." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">856</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">The second half of the protocol.</p>
+      <p class="sub">LF-1 is a daily digestive companion — it does not replace your GLP-1.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="generated" data-n="865">
+    <div class="shot"><img src="ads/0865.png" alt="A daily companion for a long journey." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">865</span><span class="chip">Companion</span><span class="chip mode">generated</span></div>
+      <p class="hl">A daily companion for a long journey.</p>
+      <p class="sub">Designed to complement a prescribed GLP-1, never to substitute for one.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="874">
+    <div class="shot"><img src="ads/0874.jpg" alt="Your plan, properly paired." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">874</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">Your plan, properly paired.</p>
+      <p class="sub">Take two capsules daily alongside your existing routine.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="883">
+    <div class="shot"><img src="ads/0883.jpg" alt="The daily companion to a weekly routine." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">883</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">The daily companion to a weekly routine.</p>
+      <p class="sub">LF-1 is a daily digestive companion — it does not replace your GLP-1.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="892">
+    <div class="shot"><img src="ads/0892.jpg" alt="It doesn’t replace anything. It supports everything." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">892</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">It doesn’t replace anything. It supports everything.</p>
+      <p class="sub">60 capsules. One month. One simple job.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="generated" data-n="901">
+    <div class="shot"><img src="ads/0901.png" alt="The all-in-one built for your GLP-1 journey." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">901</span><span class="chip">Companion</span><span class="chip mode">generated</span></div>
+      <p class="hl">The all-in-one built for your GLP-1 journey.</p>
+      <p class="sub">Designed to complement a prescribed GLP-1, never to substitute for one.</p>
+      <div class="row spread"><span class="mono">circleSeal</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="910">
+    <div class="shot"><img src="ads/0910.jpg" alt="Alongside your GLP-1, every morning." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">910</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">Alongside your GLP-1, every morning.</p>
+      <p class="sub">The companion half of a two-part routine.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="919">
+    <div class="shot"><img src="ads/0919.jpg" alt="Beside your GLP-1, not instead of it." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">919</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">Beside your GLP-1, not instead of it.</p>
+      <p class="sub">LF-1 is a daily digestive companion — it does not replace your GLP-1.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="928">
+    <div class="shot"><img src="ads/0928.jpg" alt="Everything the prescription didn’t include." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">928</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">Everything the prescription didn’t include.</p>
+      <p class="sub">60 capsules. One month. One simple job.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="generated" data-n="937">
+    <div class="shot"><img src="ads/0937.png" alt="Designed to be the other half." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">937</span><span class="chip">Companion</span><span class="chip mode">generated</span></div>
+      <p class="hl">Designed to be the other half.</p>
+      <p class="sub">Take two capsules daily alongside your existing routine.</p>
+      <div class="row spread"><span class="mono">prescriptionPair</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="946">
+    <div class="shot"><img src="ads/0946.jpg" alt="The all-in-one built for your GLP-1 journey." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">946</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">The all-in-one built for your GLP-1 journey.</p>
+      <p class="sub">The companion half of a two-part routine.</p>
+      <div class="row spread"><span class="mono">photoPanel · hero-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="956">
+    <div class="shot"><img src="ads/0956.jpg" alt="Complete the protocol." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">956</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">Complete the protocol.</p>
+      <p class="sub">60 capsules. One month. One simple job.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="generated" data-n="965">
+    <div class="shot"><img src="ads/0965.png" alt="Everything the prescription didn’t include." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">965</span><span class="chip">Companion</span><span class="chip mode">generated</span></div>
+      <p class="hl">Everything the prescription didn’t include.</p>
+      <p class="sub">LF-1 is a daily digestive companion — it does not replace your GLP-1.</p>
+      <div class="row spread"><span class="mono">numberedSteps</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="974">
+    <div class="shot"><img src="ads/0974.jpg" alt="The part of the routine you choose." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">974</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">The part of the routine you choose.</p>
+      <p class="sub">Designed to complement a prescribed GLP-1, never to substitute for one.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="983">
+    <div class="shot"><img src="ads/0983.jpg" alt="Your GLP-1 handles appetite. LF-1 handles the rest." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">983</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">Your GLP-1 handles appetite. LF-1 handles the rest.</p>
+      <p class="sub">Take two capsules daily alongside your existing routine.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="COMPANION" data-mode="photo" data-n="992">
+    <div class="shot"><img src="ads/0992.jpg" alt="One job, done daily." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">992</span><span class="chip">Companion</span><span class="chip mode">photo</span></div>
+      <p class="hl">One job, done daily.</p>
+      <p class="sub">LF-1 is a daily digestive companion — it does not replace your GLP-1.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="generated" data-n="1001">
+    <div class="shot"><img src="ads/1001.png" alt="Because a GLP-1 doesn’t come with a manual." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1001</span><span class="chip">No manual</span><span class="chip mode">generated</span></div>
+      <p class="hl">Because a GLP-1 doesn’t come with a manual.</p>
+      <p class="sub">Support for the months after the first appointment.</p>
+      <div class="row spread"><span class="mono">faqCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1010">
+    <div class="shot"><img src="ads/1010.jpg" alt="What they don’t tell you at the pharmacy." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1010</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">What they don’t tell you at the pharmacy.</p>
+      <p class="sub">Made for people already on a GLP-1 and figuring out the rest.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1019">
+    <div class="shot"><img src="ads/1019.jpg" alt="The gap between prescribed and supported." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1019</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">The gap between prescribed and supported.</p>
+      <p class="sub">Made for people already on a GLP-1 and figuring out the rest.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1028">
+    <div class="shot"><img src="ads/1028.jpg" alt="The missing chapter." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1028</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">The missing chapter.</p>
+      <p class="sub">Not medical advice — a daily companion. Talk to your clinician.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="generated" data-n="1037">
+    <div class="shot"><img src="ads/1037.png" alt="No manual. No warning. Just figure it out." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1037</span><span class="chip">No manual</span><span class="chip mode">generated</span></div>
+      <p class="hl">No manual. No warning. Just figure it out.</p>
+      <p class="sub">LF-1 is daily digestive support for the part of the journey nobody briefs you on.</p>
+      <div class="row spread"><span class="mono">faqCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1046">
+    <div class="shot"><img src="ads/1046.jpg" alt="A prescription isn’t a plan." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1046</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">A prescription isn’t a plan.</p>
+      <p class="sub">LF-1 is daily digestive support for the part of the journey nobody briefs you on.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1056">
+    <div class="shot"><img src="ads/1056.jpg" alt="Between the prescription and real life." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1056</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">Between the prescription and real life.</p>
+      <p class="sub">Made for people already on a GLP-1 and figuring out the rest.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="generated" data-n="1065">
+    <div class="shot"><img src="ads/1065.png" alt="What they don’t tell you at the pharmacy." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1065</span><span class="chip">No manual</span><span class="chip mode">generated</span></div>
+      <p class="hl">What they don’t tell you at the pharmacy.</p>
+      <p class="sub">Two capsules daily. A simple answer to an unasked question.</p>
+      <div class="row spread"><span class="mono">stickyNote</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1074">
+    <div class="shot"><img src="ads/1074.jpg" alt="Filling in what the leaflet didn’t." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1074</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">Filling in what the leaflet didn’t.</p>
+      <p class="sub">LF-1 is daily digestive support for the part of the journey nobody briefs you on.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1083">
+    <div class="shot"><img src="ads/1083.jpg" alt="Prescribed in ten minutes. Lived for months." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1083</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">Prescribed in ten minutes. Lived for months.</p>
+      <p class="sub">LF-1 is daily digestive support for the part of the journey nobody briefs you on.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1092">
+    <div class="shot"><img src="ads/1092.jpg" alt="The support nobody scheduled for you." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1092</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">The support nobody scheduled for you.</p>
+      <p class="sub">Not medical advice — a daily companion. Talk to your clinician.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="generated" data-n="1101">
+    <div class="shot"><img src="ads/1101.png" alt="Because a GLP-1 doesn’t come with a manual." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1101</span><span class="chip">No manual</span><span class="chip mode">generated</span></div>
+      <p class="hl">Because a GLP-1 doesn’t come with a manual.</p>
+      <p class="sub">LF-1 is daily digestive support for the part of the journey nobody briefs you on.</p>
+      <div class="row spread"><span class="mono">quoteCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1110">
+    <div class="shot"><img src="ads/1110.jpg" alt="Consider this the missing instructions." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1110</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">Consider this the missing instructions.</p>
+      <p class="sub">Made for people already on a GLP-1 and figuring out the rest.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1119">
+    <div class="shot"><img src="ads/1119.jpg" alt="You weren’t told. Now you are." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1119</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">You weren’t told. Now you are.</p>
+      <p class="sub">Two capsules daily. A simple answer to an unasked question.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="photo" data-n="1128">
+    <div class="shot"><img src="ads/1128.jpg" alt="You were told what it does. Not what to expect." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1128</span><span class="chip">No manual</span><span class="chip mode">photo</span></div>
+      <p class="hl">You were told what it does. Not what to expect.</p>
+      <p class="sub">Support for the months after the first appointment.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NO_MANUAL" data-mode="generated" data-n="1137">
+    <div class="shot"><img src="ads/1137.png" alt="Ten minutes of guidance. Months of reality." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1137</span><span class="chip">No manual</span><span class="chip mode">generated</span></div>
+      <p class="hl">Ten minutes of guidance. Months of reality.</p>
+      <p class="sub">Support for the months after the first appointment.</p>
+      <div class="row spread"><span class="mono">stickyNote</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1146">
+    <div class="shot"><img src="ads/1146.jpg" alt="Held to the standards we publish." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1146</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">Held to the standards we publish.</p>
+      <p class="sub">Standards mean claims have to be substantiated.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1156">
+    <div class="shot"><img src="ads/1156.jpg" alt="Where claims have to be proven." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1156</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">Where claims have to be proven.</p>
+      <p class="sub">LF-1 is manufactured in the USA, batch by batch.</p>
+      <div class="row spread"><span class="mono">photoPanel · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="generated" data-n="1165">
+    <div class="shot"><img src="ads/1165.png" alt="Made under rules that don’t allow shortcuts." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1165</span><span class="chip">USA made</span><span class="chip mode">generated</span></div>
+      <p class="hl">Made under rules that don’t allow shortcuts.</p>
+      <p class="sub">Standards mean claims have to be substantiated.</p>
+      <div class="row spread"><span class="mono">badgeGrid</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1174">
+    <div class="shot"><img src="ads/1174.jpg" alt="Made where you can check." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1174</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">Made where you can check.</p>
+      <p class="sub">A plainly described product, made in the USA.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1183">
+    <div class="shot"><img src="ads/1183.jpg" alt="Regulated. Honest label." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1183</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">Regulated. Honest label.</p>
+      <p class="sub">Made in the USA under food-supplement labelling rules.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1192">
+    <div class="shot"><img src="ads/1192.jpg" alt="USA-made. Plainly labelled." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1192</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">USA-made. Plainly labelled.</p>
+      <p class="sub">A plainly described product, made in the USA.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="generated" data-n="1201">
+    <div class="shot"><img src="ads/1201.png" alt="Made where you can check." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1201</span><span class="chip">USA made</span><span class="chip mode">generated</span></div>
+      <p class="hl">Made where you can check.</p>
+      <p class="sub">A plainly described product, made in the USA.</p>
+      <div class="row spread"><span class="mono">boxFrame</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1210">
+    <div class="shot"><img src="ads/1210.jpg" alt="Transparent formulation, USA-made." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1210</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">Transparent formulation, USA-made.</p>
+      <p class="sub">Made in the USA under food-supplement labelling rules.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1219">
+    <div class="shot"><img src="ads/1219.jpg" alt="From a label you can check." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1219</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">From a label you can check.</p>
+      <p class="sub">Made in the USA under food-supplement labelling rules.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1228">
+    <div class="shot"><img src="ads/1228.jpg" alt="No hype. Just where it’s made." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1228</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">No hype. Just where it’s made.</p>
+      <p class="sub">Non-GMO, vegetarian, allergen-free. Plainly labelled.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="generated" data-n="1237">
+    <div class="shot"><img src="ads/1237.png" alt="USA-made. Plainly labelled." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1237</span><span class="chip">USA made</span><span class="chip mode">generated</span></div>
+      <p class="hl">USA-made. Plainly labelled.</p>
+      <p class="sub">LF-1 is manufactured in the USA, batch by batch.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1246">
+    <div class="shot"><img src="ads/1246.jpg" alt="Held to the standards we publish." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1246</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">Held to the standards we publish.</p>
+      <p class="sub">Non-GMO, vegetarian, allergen-free. Plainly labelled.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="USA_MADE" data-mode="photo" data-n="1256">
+    <div class="shot"><img src="ads/1256.jpg" alt="Strict standards, simple capsule." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1256</span><span class="chip">USA made</span><span class="chip mode">photo</span></div>
+      <p class="hl">Strict standards, simple capsule.</p>
+      <p class="sub">Standards mean claims have to be substantiated.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="generated" data-n="1265">
+    <div class="shot"><img src="ads/1265.png" alt="One bottle. One month. One habit." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1265</span><span class="chip">Ritual</span><span class="chip mode">generated</span></div>
+      <p class="hl">One bottle. One month. One habit.</p>
+      <p class="sub">60 capsules per bottle — a full month of mornings.</p>
+      <div class="row spread"><span class="mono">checklist</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1274">
+    <div class="shot"><img src="ads/1274.jpg" alt="The low-effort half of your protocol." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1274</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">The low-effort half of your protocol.</p>
+      <p class="sub">60 capsules per bottle — a full month of mornings.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1283">
+    <div class="shot"><img src="ads/1283.jpg" alt="The daily step that asks nothing of you." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1283</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">The daily step that asks nothing of you.</p>
+      <p class="sub">As a dietary supplement, take two capsules daily with 6–8 oz of water.</p>
+      <div class="row spread"><span class="mono">photoPanel · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1292">
+    <div class="shot"><img src="ads/1292.jpg" alt="The simplest part of your routine." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1292</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">The simplest part of your routine.</p>
+      <p class="sub">Capsule format. No powder, no shaker, no flavour to tolerate.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="generated" data-n="1301">
+    <div class="shot"><img src="ads/1301.png" alt="Simple enough to do on the bad days." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1301</span><span class="chip">Ritual</span><span class="chip mode">generated</span></div>
+      <p class="hl">Simple enough to do on the bad days.</p>
+      <p class="sub">60 capsules per bottle — a full month of mornings.</p>
+      <div class="row spread"><span class="mono">numberedSteps</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1310">
+    <div class="shot"><img src="ads/1310.jpg" alt="A habit small enough to survive a bad week." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1310</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">A habit small enough to survive a bad week.</p>
+      <p class="sub">Capsule format. No powder, no shaker, no flavour to tolerate.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1319">
+    <div class="shot"><img src="ads/1319.jpg" alt="Morning, water, two capsules." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1319</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">Morning, water, two capsules.</p>
+      <p class="sub">Built to be kept, not just bought.</p>
+      <div class="row spread"><span class="mono">photoPanel · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1328">
+    <div class="shot"><img src="ads/1328.jpg" alt="Capsules, not powders." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1328</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">Capsules, not powders.</p>
+      <p class="sub">Capsule format. No powder, no shaker, no flavour to tolerate.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="generated" data-n="1337">
+    <div class="shot"><img src="ads/1337.png" alt="One bottle. One month. One habit." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1337</span><span class="chip">Ritual</span><span class="chip mode">generated</span></div>
+      <p class="hl">One bottle. One month. One habit.</p>
+      <p class="sub">60 capsules per bottle — a full month of mornings.</p>
+      <div class="row spread"><span class="mono">indexCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1346">
+    <div class="shot"><img src="ads/1346.jpg" alt="Designed to be easy to keep up." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1346</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">Designed to be easy to keep up.</p>
+      <p class="sub">Built to be kept, not just bought.</p>
+      <div class="row spread"><span class="mono">photoPanel · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1356">
+    <div class="shot"><img src="ads/1356.jpg" alt="The boring habit that adds up." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1356</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">The boring habit that adds up.</p>
+      <p class="sub">60 capsules per bottle — a full month of mornings.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="generated" data-n="1365">
+    <div class="shot"><img src="ads/1365.png" alt="A routine you’ll actually keep." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1365</span><span class="chip">Ritual</span><span class="chip mode">generated</span></div>
+      <p class="hl">A routine you’ll actually keep.</p>
+      <p class="sub">60 capsules per bottle — a full month of mornings.</p>
+      <div class="row spread"><span class="mono">boxFrame</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1374">
+    <div class="shot"><img src="ads/1374.jpg" alt="No mixing. No measuring. No excuses." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1374</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">No mixing. No measuring. No excuses.</p>
+      <p class="sub">As a dietary supplement, take two capsules daily with 6–8 oz of water.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1383">
+    <div class="shot"><img src="ads/1383.jpg" alt="The easiest thing you’ll do today." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1383</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">The easiest thing you’ll do today.</p>
+      <p class="sub">Built to be kept, not just bought.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="RITUAL" data-mode="photo" data-n="1392">
+    <div class="shot"><img src="ads/1392.jpg" alt="It fits in the routine you already have." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1392</span><span class="chip">Ritual</span><span class="chip mode">photo</span></div>
+      <p class="hl">It fits in the routine you already have.</p>
+      <p class="sub">Built to be kept, not just bought.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="generated" data-n="1401">
+    <div class="shot"><img src="ads/1401.png" alt="Eight things LF-1 isn’t." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1401</span><span class="chip">Clean label</span><span class="chip mode">generated</span></div>
+      <p class="hl">Eight things LF-1 isn’t.</p>
+      <p class="sub">Non-GMO, gluten-free, lactose-free, allergen-free, antibiotic-free, hormone-free, alcohol-free, vegetarian.</p>
+      <div class="row spread"><span class="mono">labelPanel</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1410">
+    <div class="shot"><img src="ads/1410.jpg" alt="Clean label isn’t a claim. It’s a list." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1410</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">Clean label isn’t a claim. It’s a list.</p>
+      <p class="sub">Manufactured in the USA. Sold under EU labelling standards.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1419">
+    <div class="shot"><img src="ads/1419.jpg" alt="Honest labelling, European standards." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1419</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">Honest labelling, European standards.</p>
+      <p class="sub">Non-GMO, gluten-free, lactose-free, allergen-free, antibiotic-free, hormone-free, alcohol-free, vegetarian.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1428">
+    <div class="shot"><img src="ads/1428.jpg" alt="No hormones, no antibiotics, no shortcuts." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1428</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">No hormones, no antibiotics, no shortcuts.</p>
+      <p class="sub">Everything on the label, nothing behind it.</p>
+      <div class="row spread"><span class="mono">photoPanel · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="generated" data-n="1437">
+    <div class="shot"><img src="ads/1437.png" alt="Vegetarian capsules, plainly labelled." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1437</span><span class="chip">Clean label</span><span class="chip mode">generated</span></div>
+      <p class="hl">Vegetarian capsules, plainly labelled.</p>
+      <p class="sub">Everything on the label, nothing behind it.</p>
+      <div class="row spread"><span class="mono">boxFrame</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1446">
+    <div class="shot"><img src="ads/1446.jpg" alt="Plain label. Plain language." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1446</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">Plain label. Plain language.</p>
+      <p class="sub">Non-GMO, gluten-free, lactose-free, allergen-free, antibiotic-free, hormone-free, alcohol-free, vegetarian.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1456">
+    <div class="shot"><img src="ads/1456.jpg" alt="Made in the USA. Labelled for the EU." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1456</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">Made in the USA. Labelled for the EU.</p>
+      <p class="sub">60 vegetarian capsules. Two daily.</p>
+      <div class="row spread"><span class="mono">photoPanel · sand-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="generated" data-n="1465">
+    <div class="shot"><img src="ads/1465.png" alt="Vegetarian capsules, plainly labelled." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1465</span><span class="chip">Clean label</span><span class="chip mode">generated</span></div>
+      <p class="hl">Vegetarian capsules, plainly labelled.</p>
+      <p class="sub">Manufactured in the USA. Sold under EU labelling standards.</p>
+      <div class="row spread"><span class="mono">labelPanel</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1474">
+    <div class="shot"><img src="ads/1474.jpg" alt="Honest labelling, European standards." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1474</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">Honest labelling, European standards.</p>
+      <p class="sub">Manufactured in the USA. Sold under EU labelling standards.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1483">
+    <div class="shot"><img src="ads/1483.jpg" alt="No hormones, no antibiotics, no shortcuts." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1483</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">No hormones, no antibiotics, no shortcuts.</p>
+      <p class="sub">Everything on the label, nothing behind it.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1492">
+    <div class="shot"><img src="ads/1492.jpg" alt="No mystery blends in the marketing." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1492</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">No mystery blends in the marketing.</p>
+      <p class="sub">Everything on the label, nothing behind it.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="generated" data-n="1501">
+    <div class="shot"><img src="ads/1501.png" alt="Clean enough to explain in a sentence." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1501</span><span class="chip">Clean label</span><span class="chip mode">generated</span></div>
+      <p class="hl">Clean enough to explain in a sentence.</p>
+      <p class="sub">Everything on the label, nothing behind it.</p>
+      <div class="row spread"><span class="mono">checklist</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1510">
+    <div class="shot"><img src="ads/1510.jpg" alt="Nothing you have to look up." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1510</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">Nothing you have to look up.</p>
+      <p class="sub">60 vegetarian capsules. Two daily.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1519">
+    <div class="shot"><img src="ads/1519.jpg" alt="If you read labels, read this one." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1519</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">If you read labels, read this one.</p>
+      <p class="sub">Manufactured in the USA. Sold under EU labelling standards.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="photo" data-n="1528">
+    <div class="shot"><img src="ads/1528.jpg" alt="A supplement that survives a label check." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1528</span><span class="chip">Clean label</span><span class="chip mode">photo</span></div>
+      <p class="hl">A supplement that survives a label check.</p>
+      <p class="sub">Everything on the label, nothing behind it.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CLEAN_LABEL" data-mode="generated" data-n="1537">
+    <div class="shot"><img src="ads/1537.png" alt="Transparent by default." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1537</span><span class="chip">Clean label</span><span class="chip mode">generated</span></div>
+      <p class="hl">Transparent by default.</p>
+      <p class="sub">Everything on the label, nothing behind it.</p>
+      <div class="row spread"><span class="mono">faqCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="photo" data-n="1546">
+    <div class="shot"><img src="ads/1546.jpg" alt="The thing to ask before you consider stopping." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1546</span><span class="chip">Practitioner</span><span class="chip mode">photo</span></div>
+      <p class="hl">The thing to ask before you consider stopping.</p>
+      <p class="sub">Always discuss changes to your GLP-1 routine with the clinician who prescribed it.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="photo" data-n="1556">
+    <div class="shot"><img src="ads/1556.jpg" alt="Take the question with you." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1556</span><span class="chip">Practitioner</span><span class="chip mode">photo</span></div>
+      <p class="hl">Take the question with you.</p>
+      <p class="sub">Always discuss changes to your GLP-1 routine with the clinician who prescribed it.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="generated" data-n="1565">
+    <div class="shot"><img src="ads/1565.png" alt="What would you ask if you had more time?" loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1565</span><span class="chip">Practitioner</span><span class="chip mode">generated</span></div>
+      <p class="hl">What would you ask if you had more time?</p>
+      <p class="sub">Always discuss changes to your GLP-1 routine with the clinician who prescribed it.</p>
+      <div class="row spread"><span class="mono">quoteCard</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="photo" data-n="1574">
+    <div class="shot"><img src="ads/1574.jpg" alt="The thing to ask before you consider stopping." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1574</span><span class="chip">Practitioner</span><span class="chip mode">photo</span></div>
+      <p class="hl">The thing to ask before you consider stopping.</p>
+      <p class="sub">Consult a physician if pregnant, nursing, under 18, or managing a medical condition.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="photo" data-n="1583">
+    <div class="shot"><img src="ads/1583.jpg" alt="A better question than &quot;is this normal?&quot;" loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1583</span><span class="chip">Practitioner</span><span class="chip mode">photo</span></div>
+      <p class="hl">A better question than &quot;is this normal?&quot;</p>
+      <p class="sub">A daily digestive companion — bring it up at your next appointment.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="photo" data-n="1592">
+    <div class="shot"><img src="ads/1592.jpg" alt="Prepared patients get better appointments." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1592</span><span class="chip">Practitioner</span><span class="chip mode">photo</span></div>
+      <p class="hl">Prepared patients get better appointments.</p>
+      <p class="sub">A daily digestive companion — bring it up at your next appointment.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="generated" data-n="1601">
+    <div class="shot"><img src="ads/1601.png" alt="A question most people don’t think to ask." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1601</span><span class="chip">Practitioner</span><span class="chip mode">generated</span></div>
+      <p class="hl">A question most people don’t think to ask.</p>
+      <p class="sub">LF-1 is a food supplement, not medical advice. Talk to your healthcare professional.</p>
+      <div class="row spread"><span class="mono">boxFrame</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="photo" data-n="1610">
+    <div class="shot"><img src="ads/1610.jpg" alt="Take the question with you." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1610</span><span class="chip">Practitioner</span><span class="chip mode">photo</span></div>
+      <p class="hl">Take the question with you.</p>
+      <p class="sub">A daily digestive companion — bring it up at your next appointment.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="photo" data-n="1619">
+    <div class="shot"><img src="ads/1619.jpg" alt="Discuss it properly." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1619</span><span class="chip">Practitioner</span><span class="chip mode">photo</span></div>
+      <p class="hl">Discuss it properly.</p>
+      <p class="sub">A daily digestive companion — bring it up at your next appointment.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="photo" data-n="1628">
+    <div class="shot"><img src="ads/1628.jpg" alt="Add it to your list of questions." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1628</span><span class="chip">Practitioner</span><span class="chip mode">photo</span></div>
+      <p class="hl">Add it to your list of questions.</p>
+      <p class="sub">Always discuss changes to your GLP-1 routine with the clinician who prescribed it.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="PRACTITIONER" data-mode="generated" data-n="1637">
+    <div class="shot"><img src="ads/1637.png" alt="Worth a conversation, not a guess." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1637</span><span class="chip">Practitioner</span><span class="chip mode">generated</span></div>
+      <p class="hl">Worth a conversation, not a guess.</p>
+      <p class="sub">LF-1 is a food supplement, not medical advice. Talk to your healthcare professional.</p>
+      <div class="row spread"><span class="mono">ruleStack</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1646">
+    <div class="shot"><img src="ads/1646.jpg" alt="Half the plate. All the same requirements." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1646</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Half the plate. All the same requirements.</p>
+      <p class="sub">Two capsules daily. Contains iron.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1656">
+    <div class="shot"><img src="ads/1656.jpg" alt="Reduced appetite is the point. Reduced intake is the side effect." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1656</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Reduced appetite is the point. Reduced intake is the side effect.</p>
+      <p class="sub">A GLP-1 reduces appetite — and everything that comes in with food.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="generated" data-n="1665">
+    <div class="shot"><img src="ads/1665.png" alt="Your plate got smaller. Your needs stayed put." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1665</span><span class="chip">Nutrient gap</span><span class="chip mode">generated</span></div>
+      <p class="hl">Your plate got smaller. Your needs stayed put.</p>
+      <p class="sub">Two capsules daily. Contains iron.</p>
+      <div class="row spread"><span class="mono">mythFact</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1674">
+    <div class="shot"><img src="ads/1674.jpg" alt="When portions shrink, intake shrinks with them." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1674</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">When portions shrink, intake shrinks with them.</p>
+      <p class="sub">LF-1 is a daily supplement taken alongside your routine.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1683">
+    <div class="shot"><img src="ads/1683.jpg" alt="Smaller portions, unchanged nutrition targets." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1683</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Smaller portions, unchanged nutrition targets.</p>
+      <p class="sub">Two capsules daily. Contains iron.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1692">
+    <div class="shot"><img src="ads/1692.jpg" alt="Mind the gap between appetite and requirement." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1692</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Mind the gap between appetite and requirement.</p>
+      <p class="sub">LF-1 is a daily supplement taken alongside your routine.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="generated" data-n="1701">
+    <div class="shot"><img src="ads/1701.png" alt="Your appetite dropped. Your needs didn’t." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1701</span><span class="chip">Nutrient gap</span><span class="chip mode">generated</span></div>
+      <p class="hl">Your appetite dropped. Your needs didn’t.</p>
+      <p class="sub">LF-1 is a daily supplement taken alongside your routine.</p>
+      <div class="row spread"><span class="mono">statBlock</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1710">
+    <div class="shot"><img src="ads/1710.jpg" alt="Eating like a bird. Still built like a person." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1710</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Eating like a bird. Still built like a person.</p>
+      <p class="sub">Formulated for people eating substantially less than before.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1719">
+    <div class="shot"><img src="ads/1719.jpg" alt="The intake question nobody asks." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1719</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">The intake question nobody asks.</p>
+      <p class="sub">Two capsules daily. Contains iron.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1728">
+    <div class="shot"><img src="ads/1728.jpg" alt="Less food in. Same body to run." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1728</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Less food in. Same body to run.</p>
+      <p class="sub">Formulated for people eating substantially less than before.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="generated" data-n="1737">
+    <div class="shot"><img src="ads/1737.png" alt="Reduced appetite is the point. Reduced intake is the side effect." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1737</span><span class="chip">Nutrient gap</span><span class="chip mode">generated</span></div>
+      <p class="hl">Reduced appetite is the point. Reduced intake is the side effect.</p>
+      <p class="sub">Two capsules daily. Contains iron.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1746">
+    <div class="shot"><img src="ads/1746.jpg" alt="The gap is real. Close it daily." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1746</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">The gap is real. Close it daily.</p>
+      <p class="sub">Formulated for people eating substantially less than before.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1756">
+    <div class="shot"><img src="ads/1756.jpg" alt="Smaller portions, unchanged nutrition targets." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1756</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Smaller portions, unchanged nutrition targets.</p>
+      <p class="sub">Formulated for people eating substantially less than before.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="generated" data-n="1765">
+    <div class="shot"><img src="ads/1765.png" alt="The trade-off worth planning for." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1765</span><span class="chip">Nutrient gap</span><span class="chip mode">generated</span></div>
+      <p class="hl">The trade-off worth planning for.</p>
+      <p class="sub">Two capsules daily. Contains iron.</p>
+      <div class="row spread"><span class="mono">statBlock</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1774">
+    <div class="shot"><img src="ads/1774.jpg" alt="Smaller portions, unchanged nutrition targets." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1774</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Smaller portions, unchanged nutrition targets.</p>
+      <p class="sub">LF-1 is a daily supplement taken alongside your routine.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1783">
+    <div class="shot"><img src="ads/1783.jpg" alt="Fewer calories in means fewer of everything in." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1783</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Fewer calories in means fewer of everything in.</p>
+      <p class="sub">Two capsules daily. Contains iron.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1792">
+    <div class="shot"><img src="ads/1792.jpg" alt="The gap between eating less and needing less." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1792</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">The gap between eating less and needing less.</p>
+      <p class="sub">A GLP-1 reduces appetite — and everything that comes in with food.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="generated" data-n="1801">
+    <div class="shot"><img src="ads/1801.png" alt="Eating less doesn’t mean needing less." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1801</span><span class="chip">Nutrient gap</span><span class="chip mode">generated</span></div>
+      <p class="hl">Eating less doesn’t mean needing less.</p>
+      <p class="sub">Formulated for people eating substantially less than before.</p>
+      <div class="row spread"><span class="mono">gradientHero</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1810">
+    <div class="shot"><img src="ads/1810.jpg" alt="The quiet arithmetic of a smaller appetite." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1810</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">The quiet arithmetic of a smaller appetite.</p>
+      <p class="sub">A GLP-1 reduces appetite — and everything that comes in with food.</p>
+      <div class="row spread"><span class="mono">photoLower · sand-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1819">
+    <div class="shot"><img src="ads/1819.jpg" alt="Eating less doesn’t mean needing less." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1819</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Eating less doesn’t mean needing less.</p>
+      <p class="sub">A GLP-1 reduces appetite — and everything that comes in with food.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="photo" data-n="1828">
+    <div class="shot"><img src="ads/1828.jpg" alt="Less on the plate. More reason to supplement." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1828</span><span class="chip">Nutrient gap</span><span class="chip mode">photo</span></div>
+      <p class="hl">Less on the plate. More reason to supplement.</p>
+      <p class="sub">Formulated for people eating substantially less than before.</p>
+      <div class="row spread"><span class="mono">photoTop · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="NUTRIENT_GAP" data-mode="generated" data-n="1837">
+    <div class="shot"><img src="ads/1837.png" alt="Smaller plates. Same requirements." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1837</span><span class="chip">Nutrient gap</span><span class="chip mode">generated</span></div>
+      <p class="hl">Smaller plates. Same requirements.</p>
+      <p class="sub">Two capsules daily. Contains iron.</p>
+      <div class="row spread"><span class="mono">contrastPanel</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="photo" data-n="1846">
+    <div class="shot"><img src="ads/1846.jpg" alt="Stop planning your day around your gut." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1846</span><span class="chip">Confidence</span><span class="chip mode">photo</span></div>
+      <p class="hl">Stop planning your day around your gut.</p>
+      <p class="sub">LF-1 is daily digestive support for people on a GLP-1.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="photo" data-n="1856">
+    <div class="shot"><img src="ads/1856.jpg" alt="The goal isn’t just progress. It’s living." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1856</span><span class="chip">Confidence</span><span class="chip mode">photo</span></div>
+      <p class="hl">The goal isn’t just progress. It’s living.</p>
+      <p class="sub">LF-1 is daily digestive support for people on a GLP-1.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="generated" data-n="1865">
+    <div class="shot"><img src="ads/1865.png" alt="Book the table." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1865</span><span class="chip">Confidence</span><span class="chip mode">generated</span></div>
+      <p class="hl">Book the table.</p>
+      <p class="sub">Made for the routine, so you can get on with everything else.</p>
+      <div class="row spread"><span class="mono">stickyNote</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="photo" data-n="1874">
+    <div class="shot"><img src="ads/1874.jpg" alt="Plans you don’t have to think twice about." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1874</span><span class="chip">Confidence</span><span class="chip mode">photo</span></div>
+      <p class="hl">Plans you don’t have to think twice about.</p>
+      <p class="sub">Made for the routine, so you can get on with everything else.</p>
+      <div class="row spread"><span class="mono">photoLower · hero-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="photo" data-n="1883">
+    <div class="shot"><img src="ads/1883.jpg" alt="Get your mornings back on the calendar." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1883</span><span class="chip">Confidence</span><span class="chip mode">photo</span></div>
+      <p class="hl">Get your mornings back on the calendar.</p>
+      <p class="sub">LF-1 is daily digestive support for people on a GLP-1.</p>
+      <div class="row spread"><span class="mono">photoTop · hero-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="photo" data-n="1892">
+    <div class="shot"><img src="ads/1892.jpg" alt="The point was always to live more." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1892</span><span class="chip">Confidence</span><span class="chip mode">photo</span></div>
+      <p class="hl">The point was always to live more.</p>
+      <p class="sub">The daily step that makes the other steps easier.</p>
+      <div class="row spread"><span class="mono">photoTop · sand-true</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="generated" data-n="1901">
+    <div class="shot"><img src="ads/1901.png" alt="Let your calendar catch up." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1901</span><span class="chip">Confidence</span><span class="chip mode">generated</span></div>
+      <p class="hl">Let your calendar catch up.</p>
+      <p class="sub">Two capsules each morning, so the rest of the day is yours.</p>
+      <div class="row spread"><span class="mono">circleSeal</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="photo" data-n="1910">
+    <div class="shot"><img src="ads/1910.jpg" alt="Get your mornings back on the calendar." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1910</span><span class="chip">Confidence</span><span class="chip mode">photo</span></div>
+      <p class="hl">Get your mornings back on the calendar.</p>
+      <p class="sub">The daily step that makes the other steps easier.</p>
+      <div class="row spread"><span class="mono">photoSide · stone-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="photo" data-n="1919">
+    <div class="shot"><img src="ads/1919.jpg" alt="The point was always to live more." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1919</span><span class="chip">Confidence</span><span class="chip mode">photo</span></div>
+      <p class="hl">The point was always to live more.</p>
+      <p class="sub">Two capsules each morning, so the rest of the day is yours.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-contrast</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="photo" data-n="1928">
+    <div class="shot"><img src="ads/1928.jpg" alt="Stop planning your day around your gut." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1928</span><span class="chip">Confidence</span><span class="chip mode">photo</span></div>
+      <p class="hl">Stop planning your day around your gut.</p>
+      <p class="sub">Made for the routine, so you can get on with everything else.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="CONFIDENCE" data-mode="generated" data-n="1937">
+    <div class="shot"><img src="ads/1937.png" alt="Leave the house without a strategy." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1937</span><span class="chip">Confidence</span><span class="chip mode">generated</span></div>
+      <p class="hl">Leave the house without a strategy.</p>
+      <p class="sub">Two capsules each morning, so the rest of the day is yours.</p>
+      <div class="row spread"><span class="mono">bigType</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="OFFER" data-mode="photo" data-n="1946">
+    <div class="shot"><img src="ads/1946.jpg" alt="A month of support, one bottle." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1946</span><span class="chip">Offer</span><span class="chip mode">photo</span></div>
+      <p class="hl">A month of support, one bottle.</p>
+      <p class="sub">One bottle is one month. Start there.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-cool</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="OFFER" data-mode="photo" data-n="1956">
+    <div class="shot"><img src="ads/1956.jpg" alt="Simple product. Simple decision." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1956</span><span class="chip">Offer</span><span class="chip mode">photo</span></div>
+      <p class="hl">Simple product. Simple decision.</p>
+      <p class="sub">Subscription available, never required.</p>
+      <div class="row spread"><span class="mono">photoSide · hero-warm</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="OFFER" data-mode="generated" data-n="1965">
+    <div class="shot"><img src="ads/1965.png" alt="Subscription optional. Always." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1965</span><span class="chip">Offer</span><span class="chip mode">generated</span></div>
+      <p class="hl">Subscription optional. Always.</p>
+      <p class="sub">Ships from the USA.</p>
+      <div class="row spread"><span class="mono">productSlot</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="OFFER" data-mode="photo" data-n="1974">
+    <div class="shot"><img src="ads/1974.jpg" alt="Begin with one bottle." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1974</span><span class="chip">Offer</span><span class="chip mode">photo</span></div>
+      <p class="hl">Begin with one bottle.</p>
+      <p class="sub">Ships from the USA.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-deep</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="OFFER" data-mode="photo" data-n="1983">
+    <div class="shot"><img src="ads/1983.jpg" alt="One bottle. Sixty capsules. That’s the unit." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1983</span><span class="chip">Offer</span><span class="chip mode">photo</span></div>
+      <p class="hl">One bottle. Sixty capsules. That’s the unit.</p>
+      <p class="sub">Subscription available, never required.</p>
+      <div class="row spread"><span class="mono">photoSide · sand-lifted</span></div>
+    </div>
+  </article>
+  <article class="card" data-angle="OFFER" data-mode="photo" data-n="1992">
+    <div class="shot"><img src="ads/1992.jpg" alt="Subscription optional. Always." loading="lazy" width="1080" height="1350"></div>
+    <div class="meta">
+      <div class="row"><span class="num">1992</span><span class="chip">Offer</span><span class="chip mode">photo</span></div>
+      <p class="hl">Subscription optional. Always.</p>
+      <p class="sub">Made in the USA. Sold by LEAF.</p>
+      <div class="row spread"><span class="mono">photoLower · stone-deep</span></div>
+    </div>
+  </article></div>
+<div class="note">
+  <h2>What this is a sample of</h2>
+  <p><b>The full 2000 are rendered and committed</b> — this page shows 220 to keep it loadable; every image, plus the manifest
+  mapping each one to its angle/layout/background, is in <code>out/set2000/</code> and <code>out/set2000.json</code>.</p>
+  <p><b>Meta upload is still blocked</b> on the Page-permission gap I flagged — creative creation fails identically whether given a public
+  image URL or the exact hash of an already-live creative on the account. Nothing here has gone to Meta yet.</p>
+</div>
+</div>
+<script>
+(function(){
+  var aSel='all', mSel='all';
+  function paint(){
+    document.querySelectorAll('.card').forEach(function(c){
+      var okA = aSel==='all' || c.dataset.angle===aSel;
+      var okM = mSel==='all' || c.dataset.mode===mSel;
+      c.hidden = !(okA && okM);
+    });
+  }
+  document.getElementById('bar').addEventListener('click',function(e){
+    var b=e.target.closest('.f'); if(!b) return;
+    if(b.dataset.a!==undefined){
+      aSel=b.dataset.a;
+      document.querySelectorAll('.f[data-a]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});
+    } else if(b.dataset.m!==undefined){
+      mSel=b.dataset.m;
+      document.querySelectorAll('.f[data-m]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});
+    }
+    paint();
+  });
+})();
+</script>
