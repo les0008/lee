@@ -1,6 +1,47 @@
 # LF-1 — 35-ad launch set
 
-## Status
+## Status (updated 2026-09-22)
+
+**Creative is on hold.** The backgrounds are generated gradients and botanical
+forms, not photographs. That is not what was asked for, and it cannot be fixed
+from inside this container: there is no image-generation tool here, and every
+image host is blocked by the egress policy — including the LF-1 lifestyle photos
+already sitting in the Meta ad account. Attaching photos to the chat bypasses the
+block entirely (attachments land on local disk), and `src/backgrounds.js` already
+carries a `photo()` slot with a legibility scrim, so compositing all 35 is a
+four-minute rebuild once images arrive.
+
+## Campaign — CBO, geo verified
+
+- Campaign: **LF-1 | Creative Test CBO | 35 x 1 ad** — `120248997933090567`
+- Budget: **€100.00/day at campaign level (CBO)**, all ad sets share it
+- Ad sets built: **5 of 35** (01–05). Paused at the owner's request.
+- Old ABO campaign `120248995119370567` is superseded — delete it in Ads Manager.
+
+### Geo, verified against Meta's own resolution
+
+Meta echoed every region key back by name, so these are confirmed, not asserted:
+
+| Key | State | Key | State |
+|---|---|---|---|
+| 3843 | Alabama | 3875 | New York |
+| 3852 | Florida | 3879 | Oklahoma |
+| 3860 | Kentucky | 3882 | Rhode Island |
+| 3861 | Louisiana | 3891 | West Virginia |
+| 3862 | Maine | 3892 | Wisconsin |
+| 3864 | Massachusetts | | |
+| 3867 | Mississippi | | |
+| 3873 | New Jersey | | |
+
+Metro-only radii via `custom_locations` (lat/lon, no city-key lookup needed):
+Atlanta +40 km (resolved to region 3853, Georgia) and Los Angeles +61 km
+(resolved to region 3847, California). **Georgia and California are not targeted
+statewide**, exactly as specified.
+
+Note: Meta returned `age_min: 18` rather than 25 — Advantage+ Audience treats age
+as a suggestion. 18+ is the correct floor for a supplement either way.
+
+## Previous status
 
 | Step | State |
 |---|---|
