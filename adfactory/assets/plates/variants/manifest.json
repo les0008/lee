@@ -1,0 +1,92 @@
+[
+  {
+    "base": "stone",
+    "grade": "true",
+    "file": "plates/variants/stone-true.png"
+  },
+  {
+    "base": "stone",
+    "grade": "warm",
+    "file": "plates/variants/stone-warm.png"
+  },
+  {
+    "base": "stone",
+    "grade": "cool",
+    "file": "plates/variants/stone-cool.png"
+  },
+  {
+    "base": "stone",
+    "grade": "deep",
+    "file": "plates/variants/stone-deep.png"
+  },
+  {
+    "base": "stone",
+    "grade": "lifted",
+    "file": "plates/variants/stone-lifted.png"
+  },
+  {
+    "base": "stone",
+    "grade": "contrast",
+    "file": "plates/variants/stone-contrast.png"
+  },
+  {
+    "base": "hero",
+    "grade": "true",
+    "file": "plates/variants/hero-true.png"
+  },
+  {
+    "base": "hero",
+    "grade": "warm",
+    "file": "plates/variants/hero-warm.png"
+  },
+  {
+    "base": "hero",
+    "grade": "cool",
+    "file": "plates/variants/hero-cool.png"
+  },
+  {
+    "base": "hero",
+    "grade": "deep",
+    "file": "plates/variants/hero-deep.png"
+  },
+  {
+    "base": "hero",
+    "grade": "lifted",
+    "file": "plates/variants/hero-lifted.png"
+  },
+  {
+    "base": "hero",
+    "grade": "contrast",
+    "file": "plates/variants/hero-contrast.png"
+  },
+  {
+    "base": "sand",
+    "grade": "true",
+    "file": "plates/variants/sand-true.png"
+  },
+  {
+    "base": "sand",
+    "grade": "warm",
+    "file": "plates/variants/sand-warm.png"
+  },
+  {
+    "base": "sand",
+    "grade": "cool",
+    "file": "plates/variants/sand-cool.png"
+  },
+  {
+    "base": "sand",
+    "grade": "deep",
+    "file": "plates/variants/sand-deep.png"
+  },
+  {
+    "base": "sand",
+    "grade": "lifted",
+    "file": "plates/variants/sand-lifted.png"
+  },
+  {
+    "base": "sand",
+    "grade": "contrast",
+    "file": "plates/variants/sand-contrast.png"
+  }
+]

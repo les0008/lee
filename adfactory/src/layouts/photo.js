@@ -105,10 +105,13 @@ const SLOTS = {
 
   compare: c => {
     const p = c.comparePair;
+    // Capped at 2 rows a side regardless of source length -- 3 sentence-length
+    // bullets a side was the single biggest driver of the "too much text"
+    // feedback on the first photo round.
     const col = (title, items, accent) => `<div style="flex:1;display:flex;flex-direction:column;gap:calc(var(--u)*1.6)">
       <div style="font-family:var(--ui);font-size:calc(var(--u)*2.2);letter-spacing:.1em;text-transform:uppercase;
         color:${accent ? 'var(--accent)' : 'var(--soft)'}">${txt(title)}</div>
-      ${items.map(i => `<div style="font-size:calc(var(--u)*2.3);line-height:1.35;${accent ? '' : 'opacity:.72'}">${txt(i)}</div>`).join('')}
+      ${items.slice(0, 2).map(i => `<div style="font-size:calc(var(--u)*2.3);line-height:1.35;${accent ? '' : 'opacity:.72'}">${txt(i)}</div>`).join('')}
     </div>`;
     return `<div style="display:flex;gap:calc(var(--u)*4)">
       ${col(p.aTitle, p.a, false)}

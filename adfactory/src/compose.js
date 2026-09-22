@@ -31,7 +31,7 @@ const SEARCH_SUGGESTIONS = [
   ['glp-1 daily companion supplement','digestive support for glp-1 routines','what to take with a glp-1'],
   ['glp-1 gut support capsules','daily supplement glp-1 journey','glp-1 routine support eu'],
   ['best companion for glp-1 plan','glp-1 digestive support vegetarian','two capsule daily glp-1'],
-  ['glp-1 support non-gmo','supplement alongside glp-1','glp-1 companion netherlands'],
+  ['glp-1 support non-gmo','supplement alongside glp-1','glp-1 companion usa made'],
 ];
 const TIMELINES = [
   [{k:'Every morning',v:'Two capsules with water'},{k:'Every day',v:'Same time, no thinking'},{k:'Every month',v:'One bottle, 60 capsules'}],
@@ -45,7 +45,7 @@ const STATS = [
   {n:'2',  label:'capsules daily'},
   {n:'8',  label:'clean-label certifications'},
   {n:'30', label:'mornings per bottle'},
-  {n:'€49', label:'for a full month'},
+  {n:'€35', label:'for a full month'},
   {n:'1',  label:'step added to your routine'},
   {n:'0',  label:'added hormones or antibiotics'},
   {n:'10s',label:'to take, every morning'},
@@ -72,7 +72,7 @@ const MYTHS_BY_ANGLE = {
   NO_MANUAL:     [{myth:'The leaflet tells you everything.'},{myth:'A prescription is a plan.'}],
   RITUAL:        [{myth:'Support has to be complicated.'},{myth:'Another powder to mix every morning.'}],
   CLEAN_LABEL:   [{myth:'Longer ingredient lists work better.'},{myth:'You need a chemistry degree to read the label.'}],
-  EURO_STANDARD: [{myth:'Every supplement is held to the same standard.'},{myth:'Claims on a label are just marketing.'}],
+  USA_MADE: [{myth:'Every supplement is held to the same standard.'},{myth:'Claims on a label are just marketing.'}],
   PRACTITIONER:  [{myth:'There is nothing worth asking about.'},{myth:'You should just work it out yourself.'}],
   CONFIDENCE:    [{myth:'You have to plan your day around it.'},{myth:'Progress means putting life on hold.'}],
   OFFER:         [{myth:'Support has to cost a fortune.'},{myth:'You have to commit to a subscription.'}],
@@ -88,7 +88,7 @@ const AFFINITY = {
   FIBER_FAILS:   ['compare','mythFact','statBlock','bigType','ruleStack','faqCard','splitPanel'],
   COMPANION:     ['prescriptionPair','compare','productSlot','bigType','splitPanel','circleSeal','numberedSteps'],
   NO_MANUAL:     ['notesApp','indexCard','quoteCard','faqCard','stickyNote','bigType','boxFrame'],
-  EURO_STANDARD: ['labelPanel','ruleStack','circleSeal','boxFrame','badgeGrid','quoteCard','bigType'],
+  USA_MADE: ['labelPanel','ruleStack','circleSeal','boxFrame','badgeGrid','quoteCard','bigType'],
   RITUAL:        ['timeline','numberedSteps','notesApp','statBlock','checklist','indexCard','productSlot'],
   CLEAN_LABEL:   ['badgeGrid','labelPanel','checklist','ruleStack','marquee','statBlock','boxFrame'],
   PRACTITIONER:  ['quoteCard','faqCard','notesApp','indexCard','boxFrame','stickyNote','ruleStack'],
@@ -98,10 +98,12 @@ const AFFINITY = {
 };
 
 /* Target creative count per angle -> 500 total. Weighted by strategic priority. */
+/* Scaled 4x from the original 500-creative set (13 angles summing to 500)
+   to reach 2000 while keeping the same strategic weighting. */
 const TARGETS = {
-  GI_SPECIFIC:65, FINALLY_NORMAL:60, NUTRIENT_GAP:50, COMPANION:45,
-  STAY_COURSE:40, FIBER_FAILS:40, RITUAL:35, CLEAN_LABEL:35, NO_MANUAL:35,
-  EURO_STANDARD:30, PRACTITIONER:25, CONFIDENCE:25, OFFER:15,
+  GI_SPECIFIC:260, FINALLY_NORMAL:240, NUTRIENT_GAP:200, COMPANION:180,
+  STAY_COURSE:160, FIBER_FAILS:160, RITUAL:140, CLEAN_LABEL:140, NO_MANUAL:140,
+  USA_MADE:120, PRACTITIONER:100, CONFIDENCE:100, OFFER:60,
 };
 
 function compose({ seed = 20260921, total = 500, productImage = null, enableGatedClaims = false } = {}) {

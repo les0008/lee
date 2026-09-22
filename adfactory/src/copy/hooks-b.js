@@ -265,8 +265,8 @@ module.exports = [
   subheads:[
     'LF-1 \u2014 60 capsules. Two capsules daily. Available at leaf-pure.com.',
     'One bottle is one month. Start there.',
-    'Sold by LEAF, a Netherlands-based brand.',
-    'Ships from the USA. Free shipping within the USA.',
+    'Made in the USA. Sold by LEAF.',
+    'Ships from the USA.',
     'Subscription available, never required.',
   ]},
 
