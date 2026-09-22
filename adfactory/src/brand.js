@@ -72,7 +72,7 @@ const BRAND = {
   product: 'LF-1',
   brand: 'LEAF',
   url: 'leaf-pure.com',
-  price: '€49',
+  price: '€35',
   capsules: '60 capsules',
   dose: '2 capsules daily',
   fdaDisclaimer: 'These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.',

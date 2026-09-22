@@ -3,6 +3,11 @@ const { BRAND } = require('../brand');
 
 /* Helpers ------------------------------------------------------------------ */
 const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+// Display copy. Product and drug-class names carry a hyphen, and a line break
+// inside one ("GLP-" / "1 handles the rest") reads as a typo in an ad, so they
+// are held together. Use esc for anything that lands in an attribute.
+const NOBREAK = /((?:LF|GLP)-1s?)\b/g;
+const txt = s => esc(s).replace(NOBREAK, '<span style="white-space:nowrap">$1</span>');
 // shape buckets drive per-format layout decisions
 const shapeOf = f => f.id === '191x1' ? 'wide' : f.id === '9x16' ? 'xtall' : f.id === '4x5' ? 'tall' : 'square';
 
@@ -26,7 +31,7 @@ const H1 = { wide: 7.4, square: 9.6, tall: 11.0, xtall: 12.5 };
 
 function headline(c, extra = '') {
   const sh = shapeOf(c.fmt);
-  return `<div class="display fit" data-max="${H1[sh]}" style="font-size:calc(var(--u)*${H1[sh]});${extra}">${esc(c.headline)}</div>`;
+  return `<div class="display fit" data-max="${H1[sh]}" style="font-size:calc(var(--u)*${H1[sh]});${extra}">${txt(c.headline)}</div>`;
 }
 
 /* -------------------------------------------------------------------------
@@ -272,4 +277,4 @@ def('ruleStack', ['editorial','premium'], c => {
   </div>`;
 });
 
-module.exports = { LAYOUTS, def, esc, shapeOf, footer, ctaPill, tick, headline, H1 };
+module.exports = { LAYOUTS, def, esc, txt, shapeOf, footer, ctaPill, tick, headline, H1 };

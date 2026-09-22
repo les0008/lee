@@ -1,6 +1,6 @@
 'use strict';
 const fs=require('fs'), path=require('path');
-const m=require('../out/launch35.json');
+const m=require('../out/photo35.json');
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const ANGLES=[...new Set(m.map(a=>a.angle))];
 const LABEL={GI_SPECIFIC:'Digestive',FINALLY_NORMAL:'Relief',NUTRIENT_GAP:'Nutrient gap',COMPANION:'Companion',
@@ -8,13 +8,13 @@ const LABEL={GI_SPECIFIC:'Digestive',FINALLY_NORMAL:'Relief',NUTRIENT_GAP:'Nutri
 
 const cards = m.map(a=>`
   <article class="card" data-angle="${a.angle}" data-n="${a.n}">
-    <div class="shot"><img src="ads/${esc(a.file)}" alt="${esc(a.headline)}" loading="lazy" width="1080" height="1350"></div>
+    <div class="shot"><img src="ads/${String(a.n).padStart(2,'0')}.png" alt="${esc(a.headline)}" loading="lazy" width="1080" height="1350"></div>
     <div class="meta">
       <div class="row"><span class="num">${String(a.n).padStart(2,'0')}</span><span class="chip">${esc(LABEL[a.angle]||a.angle)}</span></div>
       <p class="hl">${esc(a.headline)}</p>
       <p class="sub">${esc(a.subhead)}</p>
       <div class="row spread">
-        <span class="mono">${esc(a.layout)} · ${esc(a.palette)}</span>
+        <span class="mono">${esc(a.layout)} · ${esc(a.plate)}${a.slot?' · '+esc(a.slot):''}</span>
         <button class="mark" type="button" aria-label="Mark ad ${a.n}" data-n="${a.n}">Unmarked</button>
       </div>
     </div>
@@ -79,9 +79,9 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,54px);line-
 <header>
   <p class="kicker">LEAF · LF-1 · staged in Meta, paused</p>
   <h1>Thirty-five ads, one per ad set.</h1>
-  <p class="lede">Each creative tests a single idea, so a winner points at an angle rather than a coincidence. Every line passed the compliance linter: no prescription brand names, no weight-loss claims, no price, no body imagery.</p>
+  <p class="lede">Each creative tests a single idea, so a winner points at an angle rather than a coincidence. Built on your own photography and your own bottle. Every line passed the compliance linter: no prescription brand names, no weight-loss claims, no price other than the confirmed €35.</p>
   <div class="stats">
-    <span><b>35</b> creatives</span><span><b>10</b> angles</span><span><b>19</b> layouts</span>
+    <span><b>35</b> creatives</span><span><b>10</b> angles</span><span><b>3</b> photo plates</span>
     <span><b>1080×1350</b> 4:5</span><span><b>0</b> compliance violations</span>
   </div>
 </header>
@@ -93,10 +93,14 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,6vw,54px);line-
 <div class="grid" id="grid">${cards}</div>
 <div class="note">
   <h2>Before these go live</h2>
-  <p><b>Price is €35</b>, confirmed against the Shopify variant. Ad 32 carries it; the linter now blocks any other figure.</p>
-  <p><b>Backgrounds are built, not borrowed.</b> Deep botanical, studio and warm-light scenes drawn from your own landing-page palette. Competitor photography isn't ours to use — send LEAF or licensed shots and I'll composite them in place of these.</p>
-  <p><b>Budget: €100/day at campaign level</b>, shared across all 35 ad sets.</p>
-  <p><b>Targeting: specific US states</b> — waiting on your list.</p>
+  <p><b>Backgrounds and product are yours.</b> The three photographs you sent are the plates: the type
+  burnt into them was removed, the bottle was cut out of the dark scene so it can be placed freely, and the
+  ledge shot was emptied of both so the frame is reusable. Nothing here is a competitor's photography.</p>
+  <p><b>Price is €35</b>, confirmed against the Shopify variant. Ad 32 carries it; the linter blocks any other figure.</p>
+  <p><b>Budget: €100 at campaign level (CBO)</b>, shared across all 35 ad sets — one static per ad set.</p>
+  <p><b>Targeting:</b> Alabama, Florida, Kentucky, Louisiana, Maine, Massachusetts, Mississippi, New Jersey,
+  New York, Oklahoma, Rhode Island, West Virginia and Wisconsin statewide, plus Atlanta +40&nbsp;km and
+  Los&nbsp;Angeles +61&nbsp;km. Georgia and California are <i>not</i> targeted statewide.</p>
   <p><b>Everything is paused.</b> Nothing spends until you activate it.</p>
 </div>
 </div>
