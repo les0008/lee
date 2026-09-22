@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__mcp_meta_ads__ads_create_campaign",
+      "mcp__mcp_meta_ads__ads_create_ad_set",
+      "mcp__mcp_meta_ads__ads_create_ad",
+      "mcp__mcp_meta_ads__ads_create_creative",
+      "mcp__mcp_meta_ads__ads_creative_upload_media",
+      "mcp__mcp_meta_ads__ads_get_ad_preview",
+      "mcp__mcp_meta_ads__ads_get_ad_entities",
+      "mcp__mcp_meta_ads__ads_library_search"
+    ],
+    "ask": [
+      "mcp__mcp_meta_ads__ads_activate_entity",
+      "mcp__mcp_meta_ads__ads_update_entity"
+    ]
+  },
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "Creating Meta ad objects (campaigns, ad sets, ads, creatives) in the LEAF ad account. The Meta MCP creates every object PAUSED, so creation cannot spend money; only activation can, and it is gated separately."
+    ]
+  }
+}
